@@ -107,7 +107,7 @@ const Apps = () => {
         <div>
           <TaskCenterApp />
         </div>
-        <div style={{ marginTop: "-150px" }}>
+        <div style={{ marginTop: "20px" }}>
           <TopMinersRewards />
         </div>
         {/* !News Shotcode */}

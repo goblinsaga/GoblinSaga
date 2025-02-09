@@ -1,7 +1,7 @@
 const TopMinersRewards = () => {
     return (
         <section>
-            <div id="task-center">
+            <div id="top-miners">
                 <div className="tasks-list">
                     {/* Tarea 0 */}
                     <div className="blog__item">
@@ -14,7 +14,7 @@ const TopMinersRewards = () => {
                             <p style={{ fontSize: "11px", marginTop: "-10px" }} className="task-reward">Exclusive for top miners</p>
                         </div>
                         <div style={{ position: "relative", width: "150px", height: "45px", marginLeft: "-10px" }}>
-                            <a style={{ textDecoration: "none" }} href="https://app.goblinsaga.xyz/top-miners">
+                            <a style={{ textDecoration: "none" }} href="https://goblinsaga.xyz/#top">
                                 <button
                                     className="metaportal_fn_buttonLW"
                                     style={{

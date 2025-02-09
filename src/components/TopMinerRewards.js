@@ -14,7 +14,7 @@ const TopMinersRewards = () => {
                             <p style={{ fontSize: "11px", marginTop: "-10px" }} className="task-reward">Exclusive for top miners</p>
                         </div>
                         <div style={{ position: "relative", width: "150px", height: "45px", marginLeft: "-10px" }}>
-                            <a style={{ textDecoration: "none" }} href="https://goblinsaga.xyz/#top">
+                            <a style={{ textDecoration: "none" }} href="/#top">
                                 <button
                                     className="metaportal_fn_buttonLW"
                                     style={{

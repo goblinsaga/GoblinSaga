@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import RaribleX from "./RaribleMarketplace";
+
 const Collection = () => {
   useEffect(() => {
     const collection = document.querySelector(".fn_cs_collection");
@@ -150,10 +151,30 @@ const Collection = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div style={{ marginTop: "-50px" }}>
         <RaribleX />
       </div>
+
+      {/* Estilos para ajustar en pantallas pequeñas */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .item {
+            margin-left: 10px;	
+            flex: 0 0 calc(50% - 20px); /* 2 imágenes por fila en pantallas pequeñas */
+            max-width: calc(50% - 20px);
+          }
+        }
+
+        @media (max-width: 480px) {
+          .item {
+            margin-left: 10px;	
+            flex: 0 0 calc(50% - 20px); /* 2 imágenes por fila en pantallas pequeñas */
+            max-width: calc(50% - 20px);
+          }
+        }
+      `}</style>
     </section>
   );
 };
+
 export default Collection;

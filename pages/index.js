@@ -10,6 +10,7 @@ import SeenOn from "../src/components/AsSeenOn";
 import TokenPrice from "../src/components/TokenPrice";
 import RoadMapSlider from "../src/components/RoadMapStep";
 import Partners from "../src/components/partners";
+import Legacy from "../src/components/GoblinSagaLegacy";
 import { heroSlider2 } from "../src/utilits";
 
 const Index = () => {
@@ -157,6 +158,10 @@ const Index = () => {
       <Collection />
 
       <SeenOn />
+
+      <SectionDivider />
+
+      <Legacy />
 
       <SectionDivider />
 

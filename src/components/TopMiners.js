@@ -22,7 +22,7 @@ const TopMiners = () => {
             </div>
 
             <div className="meta" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <p>Next Claim: 27/10/2024</p>
+              <p>Next Claim: 02/15/2025</p>
             </div>
 
             <div className="fn_cs_divider">

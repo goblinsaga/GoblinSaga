@@ -5,7 +5,7 @@ const SeenOn = () => {
 
   return (
     <section id="faq">
-      <div style={{ marginTop: "-150px" }} className="container">
+      <div id="community-hub" style={{ marginTop: "-150px" }} className="container">
         <h3
           className="fn__maintitle big"
           data-text="Community Hub"
@@ -66,12 +66,19 @@ const SeenOn = () => {
 
         @media (max-width: 768px) {
           .blog__item {
-            flex: 0 0 100%; /* En pantallas pequeñas ocupa el 100% */
-            max-width: 100%;
+            flex: 0 0 45%; /* En pantallas pequeñas ocupa el 45% para mostrar dos por fila */
+            max-width: 45%;
           }
 
           .image-container {
-            flex-direction: column; /* Cambia la dirección a columna en móviles */
+            flex-direction: row; /* Mantén la dirección en fila para móviles */
+          }
+        }
+
+        @media (max-width: 480px) {
+          .blog__item {
+            flex: 0 0 45%; /* En pantallas muy pequeñas ocupa el 100% */
+            max-width: 45%;
           }
         }
       `}</style>

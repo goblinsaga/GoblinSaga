@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import styles from "../../styles/Home.module.css";
 import { ethers } from 'ethers';
 
 const CONTRACT_ADDRESS = '0x577407851103a3ca16d7b1c87c89970506fdf28f';
@@ -59,7 +58,7 @@ const NFTManager3: React.FC = () => {
 
   const approveERC1155 = async (tokenContractAddress: string) => {
     if (!signer) return;
-  
+
     try {
       const tokenContract = new ethers.Contract(tokenContractAddress, [
         "function setApprovalForAll(address operator, bool approved) external",
@@ -71,7 +70,7 @@ const NFTManager3: React.FC = () => {
       console.error('Error approving ERC-1155 tokens:', error);
     }
   };
-  
+
   const handleDepositERC721 = async () => {
     if (!contract || !erc721Ids) return;
 
@@ -96,16 +95,16 @@ const NFTManager3: React.FC = () => {
 
   const handleDepositERC1155 = async () => {
     if (!contract || !erc1155Id || !erc1155Quantity) return;
-  
+
     try {
       const erc1155ContractAddress = '0xE62b57bA772DFf6Aa044407D79B4B12fA28a4942'; // Dirección del contrato ERC-1155
-  
+
       // Aprobar todos los ERC-1155 solo una vez
       await approveERC1155(erc1155ContractAddress);
-  
+
       const tx = await contract.depositERC1155(erc1155Id, erc1155Quantity);
       await tx.wait();
-  
+
       alert('ERC-1155 NFTs deposited successfully');
     } catch (error) {
       console.error('Error depositing ERC-1155:', error);
@@ -128,11 +127,21 @@ const NFTManager3: React.FC = () => {
   };
 
   return (
-    <div>
-      <div>
-        <div className={styles.ecosystemBox}>
+    <section id="news">
+      <div className="container">
+        <div
+          className="container"
+          style={{
+            display: "flex",
+            flexDirection: "column", 
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100vh",
+            width: "100%"
+          }}
+        >
           <div>
-            <p className={styles.textStyle1}>Empower Support Pack</p>
+            <p>Empower Support Pack</p>
           </div>
 
           <div>
@@ -140,7 +149,6 @@ const NFTManager3: React.FC = () => {
           </div>
           <div>
             <input
-              className={styles.textInputSP}
               type="text"
               placeholder="IDs Ex: 1, 2, 3"
               value={erc721Ids}
@@ -148,8 +156,8 @@ const NFTManager3: React.FC = () => {
             />
           </div>
           <div>
-            <button className={styles.button} onClick={handleDepositERC721} disabled={!isConnected}>
-                Deposit ERC-721
+            <button className="metaportal_fn_buttonLW" onClick={handleDepositERC721} disabled={!isConnected}>
+              Deposit ERC-721
             </button>
           </div>
 
@@ -158,7 +166,6 @@ const NFTManager3: React.FC = () => {
           </div>
           <div>
             <input
-              className={styles.textInputSP}
               type="text"
               placeholder="Token ID"
               value={erc1155Id}
@@ -167,7 +174,6 @@ const NFTManager3: React.FC = () => {
           </div>
           <div style={{ marginTop: "10px" }}>
             <input
-              className={styles.textInputSP}
               type="text"
               placeholder="Quantity"
               value={erc1155Quantity}
@@ -175,8 +181,8 @@ const NFTManager3: React.FC = () => {
             />
           </div>
           <div>
-            <button className={styles.button} onClick={handleDepositERC1155} disabled={!isConnected}>
-                Deposit ERC-1155
+            <button className="metaportal_fn_buttonLW" onClick={handleDepositERC1155} disabled={!isConnected}>
+              Deposit ERC-1155
             </button>
           </div>
 
@@ -185,7 +191,6 @@ const NFTManager3: React.FC = () => {
           </div>
           <div>
             <input
-              className={styles.textInputSP}
               type="text"
               placeholder="Price (MATIC)"
               value={packPrice}
@@ -193,13 +198,13 @@ const NFTManager3: React.FC = () => {
             />
           </div>
           <div>
-            <button className={styles.button} onClick={handleSetPackPrice} disabled={!isConnected}>
-                Set Price
+            <button className="metaportal_fn_buttonLW" onClick={handleSetPackPrice} disabled={!isConnected}>
+              Set Price
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

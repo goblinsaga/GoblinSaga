@@ -11,6 +11,7 @@ import SectionDivider from "../src/components/SectionDivider";
 import SuccessMessagePopup from "../src/components/popups/SuccessMessagePopup";
 import ErrorMessagePopup from "../src/components/popups/ErrorMessagePopup";
 import Rarities from "../src/components/RaritiesTraits";
+import ShopSections from "../src/components/EmpowerSection";
 
 const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const router = useRouter();
@@ -263,7 +264,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                           error.message.includes("missing revert data")
                         ) {
                           setErrorMessage(
-                            `Minting failed: Insufficient funds. Mint price 0.0015 WETH.`
+                            `Minting failed: Insufficient funds. Mint price 9.0 POL.`
                           );
                         } else {
                           setErrorMessage(`Minting failed: ${errorName}`);
@@ -279,7 +280,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
 
                   <div style={{ width: "200px", height: "45px" }}>
                     <a
-                      href="/mint#support-packs"
+                      href="/mint#special-items"
                       style={{
                         textDecoration: "none",
                         width: "100%",
@@ -290,7 +291,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                       }}
                       className="metaportal_fn_buttonLW"
                     >
-                      Support packs
+                      Empower Items
                     </a>
                   </div>
                 </div>
@@ -401,8 +402,6 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
           {/* !Mint Box */}
         </div>
         {/* !Section Divider */}
-        <SectionDivider />
-        {/* !Section Divider */}
         <div className="container">
           <h3
             className="fn__maintitle big"
@@ -417,6 +416,10 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
             <Rarities />
           </div>
         </div>
+        {/* !Section Divider */}
+        <SectionDivider />
+        {/* !Section Divider */}
+        <ShopSections />
       </div>
     </Layout>
   );

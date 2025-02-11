@@ -1,4 +1,6 @@
-import { MediaRenderer, useAddress, useClaimConditions, useContract, ConnectWallet, lightTheme } from "@thirdweb-dev/react";
+'use client';
+
+import { useAddress, useClaimConditions, useContract, ConnectWallet, lightTheme } from "@thirdweb-dev/react";
 import { NFT, toEther } from "@thirdweb-dev/sdk";
 import { BUSINESSES_CONTRACT_ADDRESS2, STAKING_CONTRACT_ADDRESS, TOKEN_CONTRACT_ADDRESS } from "../../consts/contracts2";
 import { useState, useEffect, useRef } from "react";
@@ -6,6 +8,8 @@ import ErrorMessagePopup from './popups/ErrorMessagePopup';
 import SuccessMessagePopup from './popups/SuccessMessagePopup';
 import { BigNumber } from "ethers";
 import React from "react";
+import { MediaRenderer } from "thirdweb/react";
+import { client } from "../app/client";
 
 type Props = {
     nft: NFT;
@@ -136,8 +140,10 @@ export default function NFTCardBox({ nft }: Props) {
     return (
         <div>
             <MediaRenderer
+                client={client} 
                 src={nft.metadata.image}
-                style={{ borderRadius: "10px", marginTop: "50px" }}
+                className="nftMedia"
+                style={{ borderRadius: "10px", marginTop: "20px" }}
             />
             <div style={{ padding: "10px" }}>
                 <p style={{ textAlign: "justify" }}>Type: {nft.metadata.name}</p>
@@ -229,6 +235,7 @@ export default function NFTCardBox({ nft }: Props) {
                         onClick={handleActionButtonClick}
                         disabled={claimState !== "init" || quantity <= 0}
                         className="metaportal_fn_buttonLW"
+                        style={{ cursor: "pointer" }}
                     >
                         {isBuying
                             ? (claimState === "nftClaim" ? "Purchasing..." : "Buy Now")

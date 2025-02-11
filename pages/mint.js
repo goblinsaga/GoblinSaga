@@ -8,11 +8,8 @@ import { getNfts, getSingleNft } from "../src/redux/actions/nfts";
 import { ethers } from 'ethers';
 import MintCounter from "../src/components/TotalMinted";
 import SectionDivider from "../src/components/SectionDivider";
-import MintPackButton1 from "../src/components/NFTPacks/MintPackButton1";
 import SuccessMessagePopup from "../src/components/popups/SuccessMessagePopup";
 import ErrorMessagePopup from "../src/components/popups/ErrorMessagePopup";
-import MintPackButton2 from "../src/components/NFTPacks/MintPackButton2";
-import MintPackButton3 from "../src/components/NFTPacks/MintPackButton3";
 import Rarities from "../src/components/RaritiesTraits";
 
 const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
@@ -419,38 +416,6 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
           <div style={{ paddingBottom: "10rem" }}>
             <Rarities />
           </div>
-        </div>
-        {/* !Section Divider */}
-        <SectionDivider />
-        {/* !Section Divider */}
-        <div className="container">
-          <h3
-            className="fn__maintitle big"
-            data-text="Support Packs"
-            data-align="center"
-            style={{ marginTop: "100px" }}
-          >
-            Support Packs
-          </h3>
-
-          <div id="support-packs" style={{ marginTop: "50px" }}>
-            <div>
-              <MintPackButton1 />
-            </div>
-            <div style={{ marginTop: "50px" }}>
-              <MintPackButton2 />
-            </div>
-            <div style={{ marginTop: "50px", marginBottom: "50px" }}>
-              <MintPackButton3 />
-            </div>
-          </div>
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingBottom: "5rem" }}>
-          <a href="https://discord.com/channels/1216389419096084562/1229279637826179072/1291104543697928213" target="blank" style={{ textDecoration: 'none' }}>
-            <button className="metaportal_fn_buttonLW" style={{ cursor: 'pointer' }}>
-              How to mine Items
-            </button>
-          </a>
         </div>
       </div>
     </Layout>

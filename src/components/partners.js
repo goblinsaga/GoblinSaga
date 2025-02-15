@@ -79,8 +79,8 @@ const Partners = () => {
                         <p style={{ margin: 0 }}>We work with the best projects in the sector.</p>
 
                         <div className="partner-img" style={{ display: "flex", gap: "10px", justifyContent: "center", alignItems: "center", marginTop: "20px" }}>
-                            <img className="partner-img" src="/img/community/Phaver.png" style={{ width: "125px" }} />
                             <img className="partner-img" src="/img/community/Intract.png" style={{ width: "125px" }} />
+                            <img className="partner-img" src="/img/community/TaskOn.png" style={{ width: "125px" }} />
                             <img className="partner-img" src="/img/community/QuestN.png" style={{ width: "125px" }} />
                         </div>
 
@@ -95,4 +95,3 @@ const Partners = () => {
 };
 
 export default Partners;
-

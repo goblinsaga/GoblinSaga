@@ -1,4 +1,4 @@
-import Apps from "./Apps";
+import RoadMapSlider from "./RoadMapStep";
 const About = () => {
   return (
     <section id="about">
@@ -47,8 +47,8 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div style={{ marginTop: "-150px" }}>
-        <Apps />
+      <div>
+        <RoadMapSlider />
       </div>
     </section>
   );

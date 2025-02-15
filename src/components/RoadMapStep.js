@@ -3,7 +3,7 @@ import { roadMapProps } from "../sliderProps"; // Asegúrate de que esta importa
 
 const RoadMapSlider = () => {
   return (
-    <section id="roadmap" style={{ marginTop: "-250px" }}>
+    <section id="roadmap" style={{ marginTop: "-150px" }}>
       <div className="container">
         <h3
           className="fn__maintitle big"
@@ -87,7 +87,7 @@ const RoadMapSlider = () => {
                     <div className="item_in">
                       <h3 className="title">NFT Collection Sold Out</h3>
                       <p className="desc">
-                        Collection has reached its sold-out status, paving the way for the launch of the Secret Phase. 1,111 exclusive additional NFTs will be made available. These NFTs can be minted for free by holders.
+                        Collection has reached its sold-out status, paving the way for the launch of the Secret Phase. 1,111 exclusive additional NFTs will be made available. These NFTs can be minted only with $GSA.
                       </p>
                     </div>
                   </div>

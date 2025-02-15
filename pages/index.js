@@ -8,7 +8,7 @@ import TopMiners from "../src/components/TopMiners";
 import Faq from "../src/components/Faq";
 import SeenOn from "../src/components/AsSeenOn";
 import TokenPrice from "../src/components/TokenPrice";
-import RoadMapSlider from "../src/components/RoadMapStep";
+import Apps from "../src/components/Apps";
 import Partners from "../src/components/partners";
 import Legacy from "../src/components/GoblinSagaLegacy";
 import { heroSlider2 } from "../src/utilits";
@@ -153,7 +153,11 @@ const Index = () => {
       
       <About />
 
-      <RoadMapSlider />
+      <SectionDivider />
+
+      <Apps />
+
+      <SectionDivider />
 
       <Collection />
 

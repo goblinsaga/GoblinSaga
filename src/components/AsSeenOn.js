@@ -20,9 +20,9 @@ const SeenOn = () => {
               { src: "/img/community/Discord.png", alt: "Goblin Saga", href: "https://discord.gg/RSyZuSJN5z" },
               { src: "/img/community/Telegram.png", alt: "Goblin Saga", href: "https://t.me/goblinsaga_xyz" },
               { src: "/img/community/Intract.png", alt: "Goblin Saga", href: "https://www.intract.io/project/goblin-saga" },
-              { src: "/img/community/Phaver.png", alt: "Goblin Saga", href: "https://app.phaver.com/Wj2YxPZxFnXnPKVZ9" },
+              { src: "/img/community/DappRadar.png", alt: "Goblin Saga", href: "https://dappradar.com/dapp/goblin-saga-3" },
               { src: "/img/community/QuestN.png", alt: "Goblin Saga", href: "https://app.questn.com/goblinsaga" },
-              { src: "/img/community/MetaHub.png", alt: "Goblin Saga", href: "https://dac.community/communities/goblinsaga" },
+              { src: "/img/community/MetaHub.png", alt: "Goblin Saga", href: "https://dac.metahub.finance/communities/goblinsaga" },
               { src: "/img/community/TaskOn.png", alt: "Goblin Saga", href: "https://rewards.taskon.xyz/GoblinSaga" },
               { src: "/img/community/MagicSquare.png", alt: "Goblin Saga", href: "https://magicsquare.io/store/app/goblin-saga" },
             ].map((item, index) => (

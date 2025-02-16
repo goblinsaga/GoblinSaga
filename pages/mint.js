@@ -368,13 +368,13 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                     <span className="text">Phase 3:</span>
                   </p>
                   <div style={{ marginBottom: "10px" }}>
-                    <span className="status"><p style={{ color: "#00fc00" }}>Live: 9 <img src="/img/POL.png" style={{ width: "20px", marginTop: "3px", marginLeft: "3px" }} /></p></span>
+                    <span className="status"><p style={{ color: "red" }}>Sold out: 9 <img src="/img/POL.png" style={{ width: "20px", marginTop: "3px", marginLeft: "3px" }} /></p></span>
                   </div>
                   <p>
                     <span className="text">Phase 4:</span>
                   </p>
                   <div style={{ marginBottom: "10px" }}>
-                    <span className="status"><p style={{ color: "orange" }}>Soon: 15 <img src="/img/POL.png" style={{ width: "20px", marginTop: "3px", marginLeft: "3px" }} /></p></span>
+                    <span className="status"><p style={{ color: "#00fc00" }}>Soon: 15 <img src="/img/POL.png" style={{ width: "20px", marginTop: "3px", marginLeft: "3px" }} /></p></span>
                   </div>
                   <p>
                     <span className="text">Secret Phase:</span>

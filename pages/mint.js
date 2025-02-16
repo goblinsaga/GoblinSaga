@@ -376,6 +376,12 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                   <div style={{ marginBottom: "10px" }}>
                     <span className="status"><p style={{ color: "orange" }}>Soon: 15 <img src="/img/POL.png" style={{ width: "20px", marginTop: "3px", marginLeft: "3px" }} /></p></span>
                   </div>
+                  <p>
+                    <span className="text">Secret Phase:</span>
+                  </p>
+                  <div style={{ marginBottom: "10px" }}>
+                    <span className="status"><p>Soon: ??</p></span>
+                  </div>
                   <p style={{ fontSize: "10px", paddingTop: "1rem" }}>All phases are divided by 1,111 NFTs</p>
                 </div>
                 <div className="mint_info">

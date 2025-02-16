@@ -68,7 +68,7 @@ const MintCounter: React.FC<MintCounterProps> = ({ contractAddress }) => {
 
   return (
     <span>
-      {mintCount !== null ? mintCount : 'Loading...'}/5555
+      {mintCount !== null ? mintCount : 'Loading...'}/4444
     </span>
   );
 };

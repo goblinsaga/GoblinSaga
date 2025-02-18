@@ -38,15 +38,8 @@ const Index = () => {
               gap: "10px"
             }}
           >
-            <a href="/mint" className="metaportal_fn_button">
+            <a href="/mint" className="metaportal_fn_button" style={{ width: "250px" }}>
               <span>Mint Now</span>
-            </a>
-            <a
-              href="https://de.fi/scanner/contract/0x4ac03107603f37ad24a36c32bec98b22af46abbf?chainId=plg"
-              target="_blank"
-              className="metaportal_fn_button"
-            >
-              <span>DeFi Scan</span>
             </a>
           </div>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "20px" }}>

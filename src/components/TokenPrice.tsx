@@ -52,7 +52,7 @@ const TokenPrice = () => {
                 backgroundRepeat: 'no-repeat',  // No repetir la imagen
             }}
         >
-            <div id="apps" className="container">
+            <div id="token-price" className="container">
                 <h3
                     className="fn__maintitle big"
                     data-text="Ecosystem Token"

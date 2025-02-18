@@ -37,13 +37,19 @@ const About = () => {
                 Goblin Saga is constantly evolving, combining innovation and continuous improvements to deliver a unique experience to its community. With each update, we introduce new features, optimize performance, and expand the possibilities within the ecosystem.
               </p>
             </div>
-            <a
-              href="/mint"
-              className="metaportal_fn_button"
-              rel="noreferrer"
+            <div
+              style={{
+                display: "flex",
+                gap: "10px"
+              }}
             >
-              <span>Mint Now</span>
-            </a>
+              <a href="/mint" className="metaportal_fn_button" style={{ width: "150px" }}>
+                <span>Mint Now</span>
+              </a>
+              <a href="https://docs.goblinsaga.xyz/" target="_blank" className="metaportal_fn_button" style={{ width: "150px" }}>
+                <span>Docs</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

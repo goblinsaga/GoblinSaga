@@ -39,8 +39,11 @@ const Index = () => {
               gap: "10px"
             }}
           >
-            <a href="/mint" className="metaportal_fn_button" style={{ width: "250px" }}>
+            <a href="/mint" className="metaportal_fn_button" style={{ width: "150px" }}>
               <span>Mint Now</span>
+            </a>
+            <a href="https://docs.goblinsaga.xyz/" target="_blank" className="metaportal_fn_button" style={{ width: "150px" }}>
+              <span>Docs</span>
             </a>
           </div>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "20px" }}>

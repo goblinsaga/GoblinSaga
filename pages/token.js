@@ -24,7 +24,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const router = useRouter();
   const { id } = router.query;
   const [similarItem, setSimilarItem] = useState([]);
-  const [quantity, setQuantity] = useState(5000000);
+  const [quantity, setQuantity] = useState(1500000);
   const pricePerNft = 0.00000085;
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
@@ -239,7 +239,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                             onBlur={handleInputBlur}
                             inputMode="numeric"
                             style={{
-                              fontFamily: "Fiery Turk",
+                              fontFamily: "Pexico-Regular",
                               color: "white",
                               textAlign: "center",
                               fontSize: "25px",

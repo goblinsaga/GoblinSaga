@@ -23,9 +23,10 @@ const Index = () => {
       {/* Home Section #2 */}
       <section id="home2">
         <div className="container">
-          <h3 className="fn__maintitle big" data-text="Goblin Saga" data-align="center">
-            Goblin Saga
-          </h3>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <img src="/img/LogoGS.png" style={{ width: "25%" }} />
+          </div>
+
           <div style={{ paddingTop: "1rem" }} className="fn_cs_desc">
             <p>Conquer the DeFi world through NFTs, mining, and rewards in an innovative universe on Polygon.</p>
           </div>

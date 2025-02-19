@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
         clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
       >
         <Head>
-          <title>Goblin Saga | NFT DeFi</title>
+          <title>Goblin Saga</title>
           <link rel="icon" href="img/favicon.ico" />
           <link
             href="https://db.onlinewebfonts.com/c/b77483504f720bf0ce1d3f83f694ea52?family=Pexico-Regular"

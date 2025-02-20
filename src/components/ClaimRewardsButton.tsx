@@ -86,11 +86,11 @@ const ClaimRewardsButton = () => {
     <div>
       {!account ? (
         <button className="metaportal_fn_buttonLW " onClick={connectWallet} disabled={connecting} >
-          {connecting ? 'Connecting...' : 'Connect Wallet'}
+          {connecting ? 'Connecting...' : 'Connect'}
         </button>
       ) : (
         <button className="metaportal_fn_buttonLW" onClick={handleClaimRewards} disabled={claiming}>
-          {claiming ? 'Claiming...' : 'Claim Rewards'}
+          {claiming ? 'Claiming...' : 'Claim'}
         </button>
       )}
     </div>

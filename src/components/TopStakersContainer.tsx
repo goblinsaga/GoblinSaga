@@ -5,7 +5,7 @@ import TopStakers from './TopStakers';
 import React from 'react';
 
 const contractAddress = '0xD38bD38f9b96c9B34000A1336614506B272Fe913';
-const providerUrl = 'https://polygon-mainnet.infura.io/v3/724372ddfd7b4a4197b5187a2da456d6';
+const providerUrl = 'https://polygon-mainnet.g.alchemy.com/v2/1LBbYhQTe0JI9CY6L_zQmmDHv9usXC14';
 
 const CACHE_KEY = 'topStakersData';
 const CACHE_EXPIRY = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
@@ -69,9 +69,9 @@ const TopStakersContainer: React.FC = () => {
         // Store in localStorage with timestamp
         localStorage.setItem(CACHE_KEY, JSON.stringify({
           timestamp: Date.now(),
-          data: sortedStakers.slice(0, 20),
+          data: sortedStakers.slice(0, 10),
         }));
-        setStakersData(sortedStakers.slice(0, 20));
+        setStakersData(sortedStakers.slice(0, 10));
       } catch (error) {
         console.error('Error fetching stakers:', error);
       } finally {

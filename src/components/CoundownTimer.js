@@ -53,8 +53,8 @@ const CountdownTimer = ({ targetDate }) => {
                   fontSize: '14px',
                 }}
               >
-                <span style={{ fontSize: '18px', color: 'white' }}>{value}</span>
-                <span style={{ fontSize: '12px', color: 'grey' }}>{key}</span>
+                <span style={{ fontSize: '18px', color: 'grey' }}>{value}</span>
+                <span style={{ fontSize: '9px', color: 'grey' }}>{key}</span>
               </div>
             ))}
           </div>

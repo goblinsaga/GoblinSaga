@@ -7,9 +7,24 @@ interface Staker {
 
 interface TopMinersRewardsProps {
     stakersData: Staker[];
+    loading: boolean;
 }
 
-const TopMinersRewards: React.FC<TopMinersRewardsProps> = ({ stakersData }) => {
+const TopMinersRewards: React.FC<TopMinersRewardsProps> = ({ stakersData, loading }) => {
+    if (loading) {
+        return (
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center", // Centra horizontalmente
+                    alignItems: "center", // Centra verticalmente
+                }}
+            >
+                Loading...
+            </div>
+        );
+    }
+
     return (
         <section>
             <div id="top-miners">

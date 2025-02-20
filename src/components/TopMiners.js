@@ -3,8 +3,10 @@ import RewardPool from "./RewardPool";
 import ClaimRewardsButton from "./ClaimRewardsButton";
 import RewardPoolFourToTen from "./RewardPool4to10";
 import ClaimRewardsButtonFourToTen from "./ClaimRewardsButton4to10";
+import CountdownTimer from "./CoundownTimer";
 
 const TopMiners = () => {
+  const targetDate = new Date('2025-03-02T11:00:00');
   return (
     <section id="about">
       <div id="top" className="container">
@@ -16,6 +18,10 @@ const TopMiners = () => {
         >
           Top Miners
         </h3>
+        <div style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
+          <p>Next Claim</p>
+          <CountdownTimer targetDate={targetDate} />
+        </div>
         <div
           style={{
             display: "flex",

@@ -17,7 +17,11 @@ const TopMiners = () => {
           style={{ marginBottom: "100px" }}
         >
           Top Miners
-        </h3>
+        </h3>  
+        <div style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
+          <p style={{ textAlign: "center" }}>Next Claim</p>
+          <CountdownTimer targetDate={targetDate} />
+        </div>
         <div
           style={{
             display: "flex",
@@ -61,12 +65,6 @@ const TopMiners = () => {
             </div>
           </div>
         </div>
-        
-        <div style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
-          <p style={{ textAlign: "center" }}>Next Claim</p>
-          <CountdownTimer targetDate={targetDate} />
-        </div>
-
         <div>
           <TopStakersContainer />
         </div>

@@ -64,7 +64,7 @@ const Header = ({ walletToggle, navigationToggle }) => {
           </div>
           <div className="wallet">
             <a
-              href="https://app.goblinsaga.xyz"
+              href="https://app.goblinsaga.club"
               className="metaportal_fn_button wallet_opener"
             >
               <span>Launch App</span>

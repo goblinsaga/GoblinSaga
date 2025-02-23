@@ -25,7 +25,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const { id } = router.query;
   const [similarItem, setSimilarItem] = useState([]);
   const [quantity, setQuantity] = useState(5000000);
-  const pricePerNft = 0.0009;
+  const pricePerNft = 0.000009;
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [totalSupplyFormatted, setTotalSupplyFormatted] = useState("");
@@ -129,7 +129,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
     setQuantity((prev) => {
       if (type === "+") {
         return prev + 1000000; // Aumentar de 1000 en 1000
-      } else if (type === "-" && prev > 5000000) {
+      } else if (type === "-" && prev > 1000000) {
         return prev - 1000000; // Disminuir de 1000 en 1000, pero no bajar de 2000
       }
       return prev;
@@ -146,8 +146,8 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   };
   
   const handleInputBlur = () => {
-    if (!quantity || parseInt(quantity, 10) < 5000000) {
-      setQuantity(5000000); // Corrige el valor si es menor a 1,000,000
+    if (!quantity || parseInt(quantity, 10) < 1000000) {
+      setQuantity(1000000); // Corrige el valor si es menor a 1,000,000
     }
   };
 
@@ -208,7 +208,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                   <li>
                     <div className="item">
                       <h4>Price per token</h4>
-                      <h3>0.0009 POL</h3>
+                      <h3>0.000009 POL</h3>
                     </div>
                   </li>
                   <li>

@@ -188,9 +188,6 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
               <h3 className="fn__maintitle" data-text={nft && nft.title} data-align="left">
                 {nft && nft.title} Token Pre-Sale
               </h3>
-              <div className="desc">
-                <TokenPriceMint />
-              </div>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <AddTokenButton />
               </div>
@@ -390,7 +387,6 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
             </div>
           </div>
           {/* Mint Bottom */}
-          <TokenSaleInsights />
         </div>
       </div>
     </Layout>

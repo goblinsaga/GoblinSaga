@@ -24,8 +24,8 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const router = useRouter();
   const { id } = router.query;
   const [similarItem, setSimilarItem] = useState([]);
-  const [quantity, setQuantity] = useState(1500000);
-  const pricePerNft = 0.00000085;
+  const [quantity, setQuantity] = useState(5000000);
+  const pricePerNft = 0.00000025;
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [totalSupplyFormatted, setTotalSupplyFormatted] = useState("");
@@ -129,7 +129,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
     setQuantity((prev) => {
       if (type === "+") {
         return prev + 1000000; // Aumentar de 1000 en 1000
-      } else if (type === "-" && prev > 1000000) {
+      } else if (type === "-" && prev > 5000000) {
         return prev - 1000000; // Disminuir de 1000 en 1000, pero no bajar de 2000
       }
       return prev;
@@ -208,7 +208,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                   <li>
                     <div className="item">
                       <h4>Price per token</h4>
-                      <h3>0.00000085 POL</h3>
+                      <h3>0.00000085 USDC</h3>
                     </div>
                   </li>
                   <li>
@@ -266,7 +266,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                       <h4>Total Price</h4>
                       <h3>
                         <span className="total_price">
-                          {totalPrice} POL + GAS
+                          {totalPrice} USDC + GAS
                         </span>
                       </h3>
                     </div>

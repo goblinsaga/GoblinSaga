@@ -111,7 +111,7 @@ const RoadMapSlider = () => {
                     <div className="item_in">
                       <h3 className="title">Token LP</h3>
                       <p className="desc">
-                        With sold-out status of NFT collection and the allocated supply from the token presale, the total liquidity will be increased by 100% of the token sale proceeds and 30% of the NFT sale proceeds.
+                        With sold-out status of NFT collection and the allocated supply from the token presale, the total liquidity will be increased by 100% of the token sale proceeds and 20% of the NFT sale proceeds.
                       </p>
                     </div>
                   </div>

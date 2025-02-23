@@ -13,10 +13,7 @@ import Layout from "../src/layout/Layout";
 import { getNfts, getSingleNft } from "../src/redux/actions/nfts";
 import SuccessMessagePopup from "../src/components/popups/SuccessMessagePopup";
 import ErrorMessagePopup from "../src/components/popups/ErrorMessagePopup";
-import TokenPriceMint from "../src/components/TokenPricenTokenPage";
 import AddTokenButton from "../src/components/CAddToMM";
-import SectionDivider from "../src/components/SectionDivider";
-import TokenSaleInsights from "../src/components/TokenInsights";
 import { ethers } from "ethers";
 import { Input, Button, HStack } from "@chakra-ui/react";
 
@@ -129,7 +126,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
     setQuantity((prev) => {
       if (type === "+") {
         return prev + 1000000; // Aumentar de 1000 en 1000
-      } else if (type === "-" && prev > 1000000) {
+      } else if (type === "-" && prev > 2000000) {
         return prev - 1000000; // Disminuir de 1000 en 1000, pero no bajar de 2000
       }
       return prev;
@@ -138,21 +135,21 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
 
   const handleInputChange = (event) => {
     const value = event.target.value;
-  
+
     // Solo permite números (elimina cualquier letra o caracter no numérico)
     if (/^\d*$/.test(value)) {
       setQuantity(value);
     }
   };
-  
+
   const handleInputBlur = () => {
-    if (!quantity || parseInt(quantity, 10) < 1000000) {
-      setQuantity(1000000); // Corrige el valor si es menor a 1,000,000
+    if (!quantity || parseInt(quantity, 10) < 2000000) {
+      setQuantity(2000000); // Corrige el valor si es menor a 1,000,000
     }
   };
 
   // Cálculo del precio total
-  const totalPrice = (quantity * pricePerNft).toFixed(3);
+  const totalPrice = (quantity * pricePerNft).toFixed(2);
 
   return (
     <Layout pageTitle={"Minting"}>
@@ -186,9 +183,34 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                 </p>
               </div>
               <h3 className="fn__maintitle" data-text={nft && nft.title} data-align="left">
-                {nft && nft.title} Token Pre-Sale
+                {nft && nft.title} Token Sale
               </h3>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <p style={{ textAlign: "justify" }}>The GSA token distribution and liquidity strategies are designed to ensure sustainable growth, a fair distribution of rewards, and a strong market presence. By leveraging mining rewards, airdrops, and strategic liquidity management, we aim to create a robust ecosystem for the Goblin Saga community, fostering long-term engagement and value appreciation.</p>
+              <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "10px",
+                marginTop: "25px",
+              }}>
+                <a
+                  href="/token#token-mint"
+                  className="metaportal_fn_button"
+                  rel="noreferrer"
+                >
+                  <span>Mint Tokens</span>
+                </a>
+
+                <a
+                  href="https://skynet.certik.com/tools/token-scan/polygon/0xc1e2859c9d20456022ade2d03f2e48345ca177c2"
+                  target='_blank'
+                  className="metaportal_fn_button"
+                  rel="noreferrer"
+                >
+                  <span>CertiK Scan</span>
+                </a>
+              </div>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", paddingTop: "1rem" }}>
                 <AddTokenButton />
               </div>
             </div>
@@ -368,19 +390,9 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                       <span className="status">6,000,000,000 $GSA</span>
                     </p>
                     <p>
-                      <span className="text">Max Supply</span>
-                      <span className="status">16,500,000,000 $GSA</span>
+                      <span className="text">Additional Supply</span>
+                      <span className="status">4,500,000,000 $GSA</span>
                     </p>
-                  </div>
-                  <div>
-                    <a
-                      href="https://docs.goblinsaga.xyz/token-overview"
-                      target='_blank'
-                      className="metaportal_fn_button"
-                      rel="noreferrer"
-                    >
-                      <span>Token Overview</span>
-                    </a>
                   </div>
                 </div>
               </div>

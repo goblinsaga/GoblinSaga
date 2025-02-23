@@ -25,7 +25,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const { id } = router.query;
   const [similarItem, setSimilarItem] = useState([]);
   const [quantity, setQuantity] = useState(5000000);
-  const pricePerNft = 0.00000025;
+  const pricePerNft = 0.0009;
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [totalSupplyFormatted, setTotalSupplyFormatted] = useState("");
@@ -146,13 +146,13 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   };
   
   const handleInputBlur = () => {
-    if (!quantity || parseInt(quantity, 10) < 1000000) {
-      setQuantity(1000000); // Corrige el valor si es menor a 1,000,000
+    if (!quantity || parseInt(quantity, 10) < 5000000) {
+      setQuantity(5000000); // Corrige el valor si es menor a 1,000,000
     }
   };
 
   // Cálculo del precio total
-  const totalPrice = (quantity * pricePerNft).toFixed(2);
+  const totalPrice = (quantity * pricePerNft).toFixed(3);
 
   return (
     <Layout pageTitle={"Minting"}>
@@ -201,14 +201,14 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
           <div id="token-mint" className="metaportal_fn_mintbox">
             <div className="mint_left">
               <div className="mint_title">
-                <span>Token Pre-Sale</span>
+                <span>Presale Phase 2</span>
               </div>
               <div className="mint_list">
                 <ul>
                   <li>
                     <div className="item">
                       <h4>Price per token</h4>
-                      <h3>0.00000085 USDC</h3>
+                      <h3>0.0009 POL</h3>
                     </div>
                   </li>
                   <li>
@@ -266,7 +266,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                       <h4>Total Price</h4>
                       <h3>
                         <span className="total_price">
-                          {totalPrice} USDC + GAS
+                          {totalPrice} POL + GAS
                         </span>
                       </h3>
                     </div>

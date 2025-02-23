@@ -24,7 +24,7 @@ const Index = () => {
       <section id="home2">
         <div className="container">
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <img src="/img/LogoGS.png" style={{ width: "25%" }} />
+            <img src="/img/LogoGS.webp" style={{ width: "25%" }} />
           </div>
 
           <div style={{ paddingTop: "1rem" }} className="fn_cs_desc">

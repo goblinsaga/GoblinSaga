@@ -18,7 +18,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const { id } = router.query;
   const [similarItem, setSimilarItem] = useState([]);
   const [quantity, setQuantity] = useState(1); // Cantidad inicial
-  const pricePerNft = 10; // Precio por NFT
+  const pricePerNft = 0.0015; // Precio por NFT
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const address = useAddress();
@@ -75,7 +75,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
     });
   };
 
-  const totalPrice = (quantity * pricePerNft).toFixed(1);
+  const totalPrice = (quantity * pricePerNft).toFixed(4);
 
   const formatAddress = (addr) => {
     if (!addr) return "";
@@ -157,7 +157,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                     <div className="item">
                       <h4>NFT Price</h4>
                       <div>
-                        <h3>{pricePerNft} <img src="/img/POL.png" style={{ width: "25px", marginTop: "-5px" }} /> <span style={{ fontSize: "11px" }}>(Polygon)</span></h3>
+                        <h3>{pricePerNft} <img src="/img/WETH.png" style={{ width: "25px", marginTop: "-5px" }} /> <span style={{ fontSize: "11px" }}>(Polygon)</span></h3>
                       </div>
                     </div>
                   </li>
@@ -182,7 +182,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                       <h4>Total Price</h4>
                       <h3>
                         <span className="total_price">
-                          {totalPrice} <img src="/img/POL.png" style={{ width: "25px", marginTop: "-5px" }} /> <span style={{ fontSize: "11px" }}>(+ GAS)</span> 
+                          {totalPrice} <img src="/img/WETH.png" style={{ width: "25px", marginTop: "-5px" }} /> <span style={{ fontSize: "11px" }}>(+ approve)</span> 
                         </span>
                       </h3>
                     </div>
@@ -374,7 +374,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                     <span className="text">Phase 4:</span>
                   </p>
                   <div style={{ marginBottom: "10px" }}>
-                    <span className="status"><p style={{ color: "#00fc00" }}>Live: 10 <img src="/img/POL.png" style={{ width: "20px", marginTop: "3px", marginLeft: "3px" }} /></p></span>
+                    <span className="status"><p style={{ color: "#00fc00" }}>Live: 0.0015 <img src="/img/WETH.png" style={{ width: "20px", marginTop: "3px", marginLeft: "3px" }} /></p></span>
                   </div>
                   <p>
                     <span className="text">Secret Phase:</span>

@@ -264,7 +264,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                           error.message.includes("missing revert data")
                         ) {
                           setErrorMessage(
-                            `Minting failed: Insufficient funds. Mint price 0.0015 WETH.`
+                            `Minting failed: Insufficient funds. Mint price 15 POL.`
                           );
                         } else {
                           setErrorMessage(`Minting failed: ${errorName}`);

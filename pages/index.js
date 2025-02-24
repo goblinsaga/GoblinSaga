@@ -7,7 +7,7 @@ import Layout from "../src/layout/Layout";
 import TopMiners from "../src/components/TopMiners";
 import Faq from "../src/components/Faq";
 import SeenOn from "../src/components/AsSeenOn";
-import TokenPrice from "../src/components/TokenPrice";
+import GSAStaked from "../src/components/GsaStaked";
 import Apps from "../src/components/Apps";
 import Partners from "../src/components/partners";
 import Legacy from "../src/components/GoblinSagaLegacy";
@@ -24,7 +24,7 @@ const Index = () => {
       <section id="home2">
         <div className="container">
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <img src="/img/LogoGS.webp" style={{ width: "25%" }} />
+            <img src="/img/LogoGS.png" style={{ width: "25%" }} />
           </div>
 
           <div style={{ paddingTop: "1rem" }} className="fn_cs_desc">
@@ -144,7 +144,7 @@ const Index = () => {
       {/* Other Sections */}
       <FunFacts />
 
-      <TokenPrice />
+      <GSAStaked />
 
       <Partners />
       

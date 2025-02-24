@@ -17,7 +17,7 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Tw.
+                    X (Twitter).
                   </a>
                 </li>
               </ul>
@@ -60,8 +60,8 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
               </a>
             </li>
             <li>
-              <a className="creative_link" href="#collection">
-                Collection
+              <a className="creative_link" href="https://app.goblinsaga.xyz/task-center">
+                Task Center
               </a>
             </li>
             <li>

@@ -202,7 +202,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                 </a>
 
                 <a
-                  href="https://skynet.certik.com/tools/token-scan/polygon/0xc1e2859c9d20456022ade2d03f2e48345ca177c2"
+                  href="https://skynet.certik.com/tools/token-scan/polygon/0xC3882D10e49Ac4E9888D0C594DB723fC9cE95468"
                   target='_blank'
                   className="metaportal_fn_button"
                   rel="noreferrer"

@@ -159,8 +159,8 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
           <div className="metaportal_fn_mint_top">
             <div className="mint_left">
               <div className="img">
-                <div className="img_in" style={{ backgroundImage: `url(${nft?.image || '/img/TokenGSA.png'})` }}>
-                  <img src={nft?.image || '/img/TokenGSA.png'} alt={nft?.title || 'NFT Image'} />
+                <div className="img_in" style={{ backgroundImage: `url(${nft?.image || '/img/GSAV2.png'})` }}>
+                  <img src={nft?.image || '/img/GSAV2.png'} alt={nft?.title || 'NFT Image'} />
                 </div>
               </div>
             </div>

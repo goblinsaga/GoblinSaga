@@ -6,10 +6,10 @@ import ErrorMessagePopup from "./popups/ErrorMessagePopup";
 const AddTokenButton = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
-    const tokenAddress = "0xc1e2859c9d20456022ade2d03f2e48345ca177c2"; // Dirección del token
+    const tokenAddress = "0xC3882D10e49Ac4E9888D0C594DB723fC9cE95468"; // Dirección del token
     const tokenSymbol = "GSA"; // Símbolo del token
     const tokenDecimals = 18; // Decimales del token
-    const tokenImage = "https://i.ibb.co/WDqMV7S/LOGOS-GS-32x32.png"; // URL opcional de la imagen del token
+    const tokenImage = "https://i.ibb.co/twRCxg02/GSAV2.png"; // URL opcional de la imagen del token
 
     const addTokenToWallet = async () => {
         if (typeof window.ethereum === "undefined") {

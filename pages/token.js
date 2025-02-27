@@ -16,6 +16,7 @@ import ErrorMessagePopup from "../src/components/popups/ErrorMessagePopup";
 import AddTokenButton from "../src/components/CAddToMM";
 import { ethers } from "ethers";
 import { Input, Button, HStack } from "@chakra-ui/react";
+import TokenPriceMint from "../src/components/TokenPricenTokenPage";
 
 const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const router = useRouter();
@@ -185,7 +186,9 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
               <h3 className="fn__maintitle" data-text={nft && nft.title} data-align="left">
                 {nft && nft.title} Token Sale
               </h3>
-              <p style={{ textAlign: "justify" }}>The GSA token distribution and liquidity strategies are designed to ensure sustainable growth, a fair distribution of rewards, and a strong market presence. By leveraging mining rewards, airdrops, and strategic liquidity management, we aim to create a robust ecosystem for the Goblin Saga community, fostering long-term engagement and value appreciation.</p>
+              <div>
+                <TokenPriceMint />
+              </div>
               <div style={{
                 display: "flex",
                 justifyContent: "center",
@@ -220,7 +223,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
           <div id="token-mint" className="metaportal_fn_mintbox">
             <div className="mint_left">
               <div className="mint_title">
-                <span>Presale Phase 2</span>
+                <span>Mint Now!</span>
               </div>
               <div className="mint_list">
                 <ul>

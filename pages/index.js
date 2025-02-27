@@ -12,6 +12,7 @@ import Apps from "../src/components/Apps";
 import Partners from "../src/components/partners";
 import Legacy from "../src/components/GoblinSagaLegacy";
 import { heroSlider2 } from "../src/utilits";
+import NewUsersTwo from "../src/components/NewUsers2";
 
 const Index = () => {
   useLayoutEffect(() => {
@@ -150,7 +151,7 @@ const Index = () => {
       
       <About />
 
-      <SectionDivider />
+      <NewUsersTwo />
 
       <Apps />
 
@@ -163,6 +164,10 @@ const Index = () => {
       <SectionDivider />
 
       <Legacy />
+
+      <SectionDivider />
+
+      <TopMiners />
 
       <SectionDivider />
 

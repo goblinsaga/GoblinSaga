@@ -35,31 +35,10 @@ const FunFacts = () => {
               <div className="item">
                 <h3 className="fn__gradient_title">
                   <span className="prefix" />
-                  <Counter end={totalHeld || 0} decimals={0} />
-                </h3>
-                <p>Items Mining</p>
-                <div className="divider" />
-              </div>
-            </li>
-            <li>
-              <div className="item">
-                <h3 className="fn__gradient_title">
-                  <span className="prefix" />
                   <GoblinsMinted contractAddress="0x4Ac03107603F37AD24a36c32bEC98b22AF46ABbf" /> {/* Usa el componente aquí */}
                   <span className="suffix" />
                 </h3>
                 <p>Goblins Minted</p>
-                <div className="divider" />
-              </div>
-            </li>
-            <li>
-              <div className="item">
-                <h3 className="fn__gradient_title">
-                  <span className="prefix" />
-                  <Counter end={formattedTokensClaimed} decimals={0} /> {/* Utiliza el valor formateado */}
-                  <span className="suffix">M</span>
-                </h3>
-                <p>Tokens Mined</p>
                 <div className="divider" />
               </div>
             </li>

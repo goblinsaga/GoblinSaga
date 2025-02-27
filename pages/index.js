@@ -166,10 +166,6 @@ const Index = () => {
 
       <SectionDivider />
 
-      <TopMiners />
-
-      <SectionDivider />
-
       <Faq />
     </Layout>
   );

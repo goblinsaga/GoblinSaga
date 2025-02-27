@@ -18,7 +18,7 @@ const FunFacts = () => {
   return (
     <section id="fun_facts">
       <div className="container">
-        <div className="centered-content" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div className="centered-content">
           <div className="fn_cs_counter_list">
             <ul>
               <li>

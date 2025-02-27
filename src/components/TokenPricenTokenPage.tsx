@@ -7,7 +7,7 @@ const TokenPriceMint = () => {
         const fetchTokenPrice = async () => {
             try {
                 const response = await axios.get(
-                    'https://api.geckoterminal.com/api/v2/networks/polygon_pos/pools/0xf307d80857f08becc90404fca6be332395169ea7'
+                    'https://api.geckoterminal.com/api/v2/networks/polygon_pos/pools/0x7a0a68b0ed31ac71aef3c3251cbbedb73df3beffc2566a3545b3d457504ba152'
                 );
                 setTokenPriceUSD(response.data.data.attributes.base_token_price_usd);
             } catch (error) {
@@ -24,7 +24,7 @@ const TokenPriceMint = () => {
         if (!price) return 'Loading...';
 
         // Convertir el precio a string con 11 decimales
-        const priceStr = parseFloat(price).toFixed(10).toString();
+        const priceStr = parseFloat(price).toFixed(8).toString();
 
         // Separar la parte entera de la decimal
         const [integerPart, decimalPart] = priceStr.split('.');
@@ -74,7 +74,7 @@ const TokenPriceMint = () => {
                                                 style={{
                                                     marginTop: "-3px",
                                                 }}
-                                                src="/img/favicon.ico"
+                                                src="/img/GSAV2.png"
                                                 alt="Logo"
                                             />
                                         </span>
@@ -101,7 +101,7 @@ const TokenPriceMint = () => {
                                                     margin: "0",
                                                 }}
                                             >
-                                                GSA/USD
+                                                GSA/USDC
                                             </p>
                                         </div>
                                     </div>
@@ -121,30 +121,6 @@ const TokenPriceMint = () => {
                     </div>
                 </div>
                 {/* !News Shotcode */}
-                <div style={{
-                    display: "flex",
-                    justifyContent: "center", 
-                    alignItems: "center", 
-                    gap: "10px",
-                    marginTop: "25px",
-                }}>
-                    <a
-                        href="/token#token-mint"
-                        className="metaportal_fn_button"
-                        rel="noreferrer"
-                    >
-                        <span>Mint Tokens</span>
-                    </a>
-
-                    <a
-                        href="https://skynet.certik.com/tools/token-scan/polygon/0xc1e2859c9d20456022ade2d03f2e48345ca177c2"
-                        target='_blank'
-                        className="metaportal_fn_button"
-                        rel="noreferrer"
-                    >
-                        <span>CertiK Scan</span>
-                    </a>
-                </div>
             </div>
         </section>
     );

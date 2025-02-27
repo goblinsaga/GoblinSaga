@@ -1,4 +1,4 @@
-import { ThirdwebProvider, metamaskWallet, trustWallet, walletConnect, okxWallet } from "@thirdweb-dev/react";
+import { ThirdwebProvider, metamaskWallet, trustWallet, walletConnect, coinbaseWallet } from "@thirdweb-dev/react";
 import { Polygon } from "@thirdweb-dev/chains";
 import Head from "next/head";
 import { Provider } from "react-redux";
@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
         supportedChains={[Polygon]}
         supportedWallets={[
           metamaskWallet(),
-          okxWallet(),
+          coinbaseWallet(),
           trustWallet(),
           walletConnect(),
         ]}

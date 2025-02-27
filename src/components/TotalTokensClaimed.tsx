@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 
 const contractAddresses = [
-    '0xe088d4349E1Fe17072A743b87FB2d511C4772449',
-    '0xD38bD38f9b96c9B34000A1336614506B272Fe913',
-    '0x997C6fb85EE4E54Fe099A1C83Cd9f53b1BceF65C'
+    '0x7bBF62c83d3d00eCFDA3Ea98355B2895A453d786',
+    '0x4c501f493aE00a866A8cB2De4fc31f19e5d676f0',
+    '0x48A3a50b925CA2c2e92fCF77883BD0df111E9c51'
 ];
 
 const abi = [
@@ -44,32 +44,56 @@ const useTotalTokensClaimed = () => {
     const [totalTokensClaimed, setTotalTokensClaimed] = useState<number | null>(null);
 
     useEffect(() => {
-        const fetchTotalTokensClaimed = async () => {
+        const provider = new ethers.providers.JsonRpcProvider('https://137.rpc.thirdweb.com');
+
+        const fetchAndListen = async () => {
             try {
-                const provider = new ethers.providers.JsonRpcProvider('https://137.rpc.thirdweb.com');
-                
+                // Obtener el total inicial
                 const totalPromises = contractAddresses.map(async (address) => {
                     const contract = new ethers.Contract(address, abi, provider);
                     const filter = contract.filters.RewardsClaimed();
                     const events = await contract.queryFilter(filter);
-                    
-                    return events.reduce((acc: number, event: ethers.Event) => {
+
+                    return events.reduce((acc, event) => {
                         const rewardAmount = event.args?.rewardAmount;
                         return acc + (rewardAmount ? parseFloat(ethers.utils.formatUnits(rewardAmount, 18)) : 0);
                     }, 0);
                 });
 
                 const totals = await Promise.all(totalPromises);
-                const total = totals.reduce((acc, curr) => acc + curr, 0);
+                const totalFromEvents = totals.reduce((acc, curr) => acc + curr, 0);
+
+                // Sumar el valor fijo
+                const fixedAdditionalTokens = 1_402_000_000;
+                const total = totalFromEvents + fixedAdditionalTokens;
 
                 setTotalTokensClaimed(total);
+
+                // Escuchar eventos en tiempo real
+                contractAddresses.forEach((address) => {
+                    const contract = new ethers.Contract(address, abi, provider);
+                    contract.on('RewardsClaimed', (staker, rewardAmount) => {
+                        setTotalTokensClaimed((prevTotal) => {
+                            const newClaim = parseFloat(ethers.utils.formatUnits(rewardAmount, 18));
+                            return prevTotal + newClaim;
+                        });
+                    });
+                });
             } catch (error) {
                 console.error('Error fetching total tokens claimed:', error);
                 setTotalTokensClaimed(null);
             }
         };
 
-        fetchTotalTokensClaimed();
+        fetchAndListen();
+
+        // Limpiar listeners al desmontar el componente
+        return () => {
+            contractAddresses.forEach((address) => {
+                const contract = new ethers.Contract(address, abi, provider);
+                contract.removeAllListeners('RewardsClaimed');
+            });
+        };
     }, []);
 
     return totalTokensClaimed;

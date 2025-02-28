@@ -99,7 +99,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   };
 
   const tokenAddress = "0xC3882D10e49Ac4E9888D0C594DB723fC9cE95468";
-  const ALCHEMY_URL = "https://polygon-mainnet.g.alchemy.com/v2/1LBbYhQTe0JI9CY6L_zQmmDHv9usXC14"; // URL Alchemy
+  const ALCHEMY_URL = "https://polygon-mainnet.g.alchemy.com/v2/Rwyo0npJ8fyyLQQQ5vFlH9K3yva_adGb"; // URL Alchemy
   const { contract } = useContract(tokenAddress, "token-drop");
   const address = useAddress();
 

@@ -4,7 +4,6 @@ import Collection from "../src/components/Collection";
 import FunFacts from "../src/components/FunFacts";
 import SectionDivider from "../src/components/SectionDivider";
 import Layout from "../src/layout/Layout";
-import TopMiners from "../src/components/TopMiners";
 import Faq from "../src/components/Faq";
 import SeenOn from "../src/components/AsSeenOn";
 import Apps from "../src/components/Apps";
@@ -164,10 +163,6 @@ const Index = () => {
       <SectionDivider />
 
       <Legacy />
-
-      <SectionDivider />
-
-      <TopMiners />
 
       <SectionDivider />
 

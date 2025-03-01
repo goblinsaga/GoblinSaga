@@ -196,10 +196,6 @@ const Apps = () => {
             </div>
           </Link>
         </div>
-
-        <div>
-          <TopMinersRewards />
-        </div>
         {/* !News Shotcode */}
       </div>
     </section>

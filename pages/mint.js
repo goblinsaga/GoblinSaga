@@ -11,7 +11,6 @@ import SectionDivider from "../src/components/SectionDivider";
 import SuccessMessagePopup from "../src/components/popups/SuccessMessagePopup";
 import ErrorMessagePopup from "../src/components/popups/ErrorMessagePopup";
 import Rarities from "../src/components/RaritiesTraits";
-import ShopSections from "../src/components/EmpowerSection";
 
 const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const router = useRouter();
@@ -422,10 +421,6 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
             <Rarities />
           </div>
         </div>
-        {/* !Section Divider */}
-        <SectionDivider />
-        {/* !Section Divider */}
-        <ShopSections />
       </div>
     </Layout>
   );

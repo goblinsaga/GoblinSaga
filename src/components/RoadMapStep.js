@@ -63,7 +63,7 @@ const RoadMapSlider = () => {
                     <div className="item_in">
                       <h3 className="title">xGSA/GSA Token Launch</h3>
                       <p className="desc">
-                        Introduce the launch of xGSA and GSA tokens, designed to power the mining process within the Goblin Saga app. These tokens will incentivize holders to actively participate in ecosystem.
+                        Introduce the launch $GSA token, designed to power the mining process within the Goblin Saga app. This token will incentivize holders to actively participate in ecosystem.
                       </p>
                     </div>
                   </div>

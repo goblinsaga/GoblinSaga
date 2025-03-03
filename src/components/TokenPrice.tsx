@@ -63,11 +63,11 @@ const TokenPrice = () => {
                 {/* News Shotcode */}
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "-40px", marginBottom: "10px" }}>
                     <a href='https://memecoinseason.net/p/goblin-saga' target='_blank' rel='noreferrer'>
-                        <img 
-                            src='/img/MemeCoinSeason.svg' 
-                            style={{ width: "130px", transition: "transform 0.3s ease-in-out", cursor: "pointer" }} 
-                            onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.2)"} 
-                            onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"} 
+                        <img
+                            src='/img/MemeCoinSeason.svg'
+                            style={{ width: "130px", transition: "transform 0.3s ease-in-out", cursor: "pointer" }}
+                            onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.2)"}
+                            onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
                         />
                     </a>
                 </div>
@@ -144,14 +144,25 @@ const TokenPrice = () => {
                                     </h3>
                                 </div>
                             </div>
+                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "-40px", marginBottom: "10px" }}>
+                                <a href='/token' rel='noreferrer'>
+                                    <img
+                                        src='/img/GeckoTerminal.png'
+                                        style={{ width: "130px", transition: "transform 0.3s ease-in-out", cursor: "pointer" }}
+                                        onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.2)"}
+                                        onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
+                                    />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 {/* !News Shotcode */}
                 <div style={{
                     display: "flex",
-                    justifyContent: "center", 
-                    alignItems: "center", 
+                    justifyContent: "center",
+                    alignItems: "center",
                     gap: "10px",
                 }}>
                     <a

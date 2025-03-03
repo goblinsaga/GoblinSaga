@@ -32,7 +32,7 @@ const NewUsers = () => {
                 `}
             </style>
 
-            <div className="container" style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
                 <div
                     className="partners-container"
                     style={{

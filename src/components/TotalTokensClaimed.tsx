@@ -64,7 +64,7 @@ const useTotalTokensClaimed = () => {
                 const totalFromEvents = totals.reduce((acc, curr) => acc + curr, 0);
 
                 // Sumar el valor fijo
-                const fixedAdditionalTokens = 1_402_000_000;
+                const fixedAdditionalTokens = 1_406_000_000;
                 const total = totalFromEvents + fixedAdditionalTokens;
 
                 setTotalTokensClaimed(total);

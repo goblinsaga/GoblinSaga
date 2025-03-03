@@ -23,7 +23,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const router = useRouter();
   const { id } = router.query;
   const [similarItem, setSimilarItem] = useState([]);
-  const [quantity, setQuantity] = useState(1000000);
+  const [quantity, setQuantity] = useState(500000);
   const pricePerNft = 0.000003;
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
@@ -128,7 +128,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
     setQuantity((prev) => {
       if (type === "+") {
         return prev + 2000000; // Aumentar de 1000 en 1000
-      } else if (type === "-" && prev > 1000000) {
+      } else if (type === "-" && prev > 500000) {
         return prev - 2000000; // Disminuir de 1000 en 1000, pero no bajar de 2000
       }
       return prev;
@@ -145,8 +145,8 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   };
 
   const handleInputBlur = () => {
-    if (!quantity || parseInt(quantity, 10) < 1000000) {
-      setQuantity(1000000); // Corrige el valor si es menor a 1,000,000
+    if (!quantity || parseInt(quantity, 10) < 500000) {
+      setQuantity(500000); // Corrige el valor si es menor a 1,000,000
     }
   };
 

@@ -17,6 +17,7 @@ import AddTokenButton from "../src/components/CAddToMM";
 import { ethers } from "ethers";
 import { Input, Button, HStack } from "@chakra-ui/react";
 import TokenPriceMint from "../src/components/TokenPricenTokenPage";
+import PolygonGasPrice from "../src/components/PolygonGasPrice";
 
 const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const router = useRouter();
@@ -99,7 +100,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   };
 
   const tokenAddress = "0xC3882D10e49Ac4E9888D0C594DB723fC9cE95468";
-  const ALCHEMY_URL = "https://polygon-mainnet.g.alchemy.com/v2/Rwyo0npJ8fyyLQQQ5vFlH9K3yva_adGb"; // URL Alchemy
+  const ALCHEMY_URL = "https://polygon-mainnet.g.alchemy.com/v2/1LBbYhQTe0JI9CY6L_zQmmDHv9usXC14"; // URL Alchemy
   const { contract } = useContract(tokenAddress, "token-drop");
   const address = useAddress();
 
@@ -367,7 +368,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
             <div className="mint_right">
               <div className="mright">
                 <div className="mint_time">
-                  <h4>$GSA Token Distribution</h4>
+                  <PolygonGasPrice />
                 </div>
                 <div className="mint_checked">
                   <p>

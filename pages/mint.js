@@ -7,10 +7,11 @@ import { Web3Button, lightTheme, useAddress, useDisconnect, useSDK } from "@thir
 import { getNfts, getSingleNft } from "../src/redux/actions/nfts";
 import { ethers } from 'ethers';
 import MintCounter from "../src/components/TotalMinted";
-import SectionDivider from "../src/components/SectionDivider";
 import SuccessMessagePopup from "../src/components/popups/SuccessMessagePopup";
 import ErrorMessagePopup from "../src/components/popups/ErrorMessagePopup";
 import Rarities from "../src/components/RaritiesTraits";
+import NewUsers from "../src/components/NewUsers";
+import PolygonGasPrice from "../src/components/PolygonGasPrice";
 
 const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const router = useRouter();
@@ -137,7 +138,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                   Conquer the DeFi world through NFTs, mining, and rewards in an innovative universe on Polygon.
                 </p>
                 <p style={{ textAlign: "justify" }}>
-                  Goblin Saga is an exclusive collection of 4,444 hand-crafted pixel art NFTs, each one unique and designed to immerse you in a captivating world. These NFTs are not just digital collectibles—they are also your gateway to earning $xGSA Tokens, offering a new way to engage and grow your digital assets.
+                  Goblin Saga is an exclusive collection of 4,444 hand-crafted pixel art NFTs, each one unique and designed to immerse you in a captivating world. These NFTs are not just digital collectibles—they are also your gateway to earning $GSA Token on Mining App, offering a new way to engage and grow your digital assets.
                 </p>
                 <p>Mint, Mine, Earn & Trade NOW!</p>
               </div>
@@ -191,15 +192,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
               <div className="mint_desc">
                 {successMessage && <SuccessMessagePopup message={successMessage} onClose={() => setSuccessMessage('')} />}
                 {errorMessage && <ErrorMessagePopup message={errorMessage} onClose={() => setErrorMessage('')} />}
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    gap: "20px",
-                    alignItems: "center",
-                    marginTop: "-10px"
-                  }}
-                >
+                <div>
                   <div style={{ width: "200px", height: "45px" }}>
                     <Web3Button
                       connectWallet={{
@@ -276,23 +269,6 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                       MINT GOBLIN(S)
                     </Web3Button>
                   </div>
-
-                  <div style={{ width: "200px", height: "45px" }}>
-                    <a
-                      href="/mint#special-items"
-                      style={{
-                        textDecoration: "none",
-                        width: "100%",
-                        height: "100%",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                      className="metaportal_fn_buttonLW"
-                    >
-                      Empower Items
-                    </a>
-                  </div>
                 </div>
 
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
@@ -348,7 +324,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
             <div className="mint_right">
               <div className="mright">
                 <div className="mint_time">
-                  <h4>About Mint Phases</h4>
+                  <PolygonGasPrice />
                 </div>
                 <div className="mint_checked">
                   <p>
@@ -419,6 +395,10 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
 
           <div style={{ paddingBottom: "10rem" }}>
             <Rarities />
+          </div>
+
+          <div style={{ paddingBottom: "10rem" }}>
+            <NewUsers />
           </div>
         </div>
       </div>

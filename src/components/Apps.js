@@ -1,5 +1,5 @@
 import Link from "next/link";
-import TopMinersRewards from "./TopMinerRewards";
+
 const Apps = () => {
   return (
     <section id="news">
@@ -41,7 +41,7 @@ const Apps = () => {
               }}
             >
               <div className="title">
-                <img src="/img/LOGOS-xGS-32x32.png" />
+                <img src="/img/GSAV2.png" />
               </div>
               <div className="meta">
                 <p style={{ textAlign: "center" }}>Mining App</p>
@@ -49,7 +49,7 @@ const Apps = () => {
             </div>
           </Link>
 
-          <Link href="https://app.goblinsaga.xyz/defi#simple-earn-v3">
+          <Link href="https://app.goblinsaga.xyz/defi#POL-Staking">
             <div
               style={{
                 width: "260px",
@@ -68,7 +68,7 @@ const Apps = () => {
               }}
             >
               <div className="title">
-                <img src="/img/pol-staking.png" />
+                <img src="/img/POL-GSA2.png" />
               </div>
               <div className="meta">
                 <p style={{ textAlign: "center" }}>POL/GSA Staking</p>
@@ -76,7 +76,7 @@ const Apps = () => {
             </div>
           </Link>
           
-          <Link href="https://app.goblinsaga.xyz/defi#simple-earn-v4">
+          <Link href="https://app.goblinsaga.xyz/defi#GSA-WGSA-Stake">
             <div
               style={{
                 width: "260px",
@@ -95,10 +95,10 @@ const Apps = () => {
               }}
             >
               <div className="title">
-                <img src="/img/GSA-xGSA.png" />
+                <img src="/img/GSA-WGSA.png" />
               </div>
               <div className="meta">
-                <p style={{ textAlign: "center" }}>GSA/xGSA Staking</p>
+                <p style={{ textAlign: "center" }}>GSA/WGSA Staking</p>
               </div>
             </div>
           </Link>
@@ -115,7 +115,7 @@ const Apps = () => {
             flexWrap: "wrap", // Para asegurar que los elementos se ajusten bien en pantalla pequeña.
           }}
         >
-          <Link href="https://app.goblinsaga.xyz/defi#token-swap">
+          <Link href="https://app.goblinsaga.xyz/defi">
             <div
               style={{
                 width: "260px",
@@ -134,10 +134,10 @@ const Apps = () => {
               }}
             >
               <div className="title">
-                <img src="/img/token-swap.png" />
+                <img src="/img/token-swap2.png" />
               </div>
               <div className="meta">
-                <p style={{ textAlign: "center" }}>Token Swap</p>
+                <p style={{ textAlign: "center" }}>Token Swap (Soon)</p>
               </div>
             </div>
           </Link>
@@ -161,7 +161,7 @@ const Apps = () => {
               }}
             >
               <div className="title">
-                <img src="/img/DailyRewards.png" />
+                <img src="/img/DailyRewards2.png" />
               </div>
               <div className="meta">
                 <p style={{ textAlign: "center" }}>Task Center</p>

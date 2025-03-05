@@ -24,7 +24,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const { id } = router.query;
   const [similarItem, setSimilarItem] = useState([]);
   const [quantity, setQuantity] = useState(500000);
-  const pricePerNft = 0.000003;
+  const pricePerNft = 0.000013;
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [totalSupplyFormatted, setTotalSupplyFormatted] = useState("");
@@ -231,7 +231,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                   <li>
                     <div className="item">
                       <h4>Price per token</h4>
-                      <h3>0.000003 <img src="/img/USDC.png" style={{ width: "20px", marginTop: "-4px", marginLeft: "-5px" }} /> <span style={{ fontSize: "11px" }}>(polygon)</span></h3>
+                      <h3>0.000013 <img src="/img/POL.png" style={{ width: "20px", marginTop: "-4px", marginLeft: "-5px" }} /> <span style={{ fontSize: "11px" }}>(polygon)</span></h3>
                     </div>
                   </li>
                   <li>
@@ -289,7 +289,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                       <h4>Total Price</h4>
                       <h3>
                         <span className="total_price">
-                          {totalPrice} <img src="/img/USDC.png" style={{ width: "20px", marginTop: "-4px", marginLeft: "-5px" }} /> <span style={{ fontSize: "11px" }}>(+ approve)</span>
+                          {totalPrice} <img src="/img/POL.png" style={{ width: "20px", marginTop: "-4px", marginLeft: "-5px" }} /> <span style={{ fontSize: "11px" }}>(+ gas)</span>
                         </span>
                       </h3>
                     </div>
@@ -394,7 +394,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                       <span className="status">6,000,000,000 $GSA</span>
                     </p>
                     <p style={{ marginTop: "10px" }}>
-                      <span className="text">Additional Supply</span>
+                      <span className="text">Additional Supply (Optional)</span>
                       <span className="status">4,500,000,000 $GSA</span>
                     </p>
                     <p style={{ marginTop: "10px" }}>

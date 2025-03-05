@@ -25,7 +25,7 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
           </div>
           <div className="wallet">
             <a
-              href="https://app.goblinsaga.club"
+              href="https://app.goblinsaga.xyz"
               className="metaportal_fn_button wallet_opener"
             >
               <span>Launch App</span>

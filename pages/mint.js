@@ -182,7 +182,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                       <h4>Total Price</h4>
                       <h3>
                         <span className="total_price">
-                          {totalPrice} <img src="/img/POL.png" style={{ width: "25px", marginTop: "-5px" }} /> <span style={{ fontSize: "11px" }}>(+ GAS)</span> 
+                          {totalPrice} <img src="/img/POL.png" style={{ width: "25px", marginTop: "-5px" }} /> <span style={{ fontSize: "11px" }}>(+ GAS)</span>
                         </span>
                       </h3>
                     </div>
@@ -288,8 +288,8 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                 </p>
               </div>
 
-              <div style={{ marginTop: "50px" }}>
-                <p style={{ textAlign: "center" }}>Mint on Goblin Saga App and claim <span style={{ color: "yellow" }}>1,000,000</span> $GSA.</p>
+              <div className="blog__item" style={{ marginTop: "50px" }}>
+                <p style={{ textAlign: "center" }}>Mint on App and claim <span style={{ color: "yellow" }}>1,000,000</span> $GSA</p>
                 <div
                   style={{
                     display: "flex",
@@ -319,6 +319,10 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                     </a>
                   </div>
                 </div>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", marginTop: "50px" }}>
+                <p>Launched With</p>
+                <img src="/img/thirdweb-logo.png" alt="Thirdweb" style={{ width: "100px", marginTop: "-20px" }} />
               </div>
             </div>
             <div className="mint_right">

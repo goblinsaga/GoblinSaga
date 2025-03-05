@@ -5,6 +5,7 @@ import {
   Web3Button,
   lightTheme,
 } from "@thirdweb-dev/react";
+import Link from "next/link";
 import { BigNumber, utils } from "ethers";
 import { useMemo, useState, useEffect } from "react";
 import { useRouter } from "next/router";
@@ -23,7 +24,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const router = useRouter();
   const { id } = router.query;
   const [similarItem, setSimilarItem] = useState([]);
-  const [quantity, setQuantity] = useState(500000);
+  const [quantity, setQuantity] = useState(100000);
   const pricePerNft = 0.000013;
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
@@ -127,9 +128,9 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const updateQuantity = (type) => {
     setQuantity((prev) => {
       if (type === "+") {
-        return prev + 2000000; // Aumentar de 1000 en 1000
-      } else if (type === "-" && prev > 500000) {
-        return prev - 2000000; // Disminuir de 1000 en 1000, pero no bajar de 2000
+        return prev + 100000; // Aumentar de 1000 en 1000
+      } else if (type === "-" && prev > 100000) {
+        return prev - 100000; // Disminuir de 1000 en 1000, pero no bajar de 2000
       }
       return prev;
     });
@@ -146,7 +147,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
 
   const handleInputBlur = () => {
     if (!quantity || parseInt(quantity, 10) < 500000) {
-      setQuantity(500000); // Corrige el valor si es menor a 1,000,000
+      setQuantity(100000); // Corrige el valor si es menor a 1,000,000
     }
   };
 
@@ -358,11 +359,43 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                     MINT TOKENS
                   </Web3Button>
                 </div>
-                <p>
-                  By clicking “MINT TOKENS” button, you agree to our{" "}
-                  <a href="#">Terms of Service</a> and our{" "}
-                  <a href="#">Privacy Policy</a>.
-                </p>
+
+                <p style={{ marginBottom: "10px" }}>About Token ⤵</p>
+                <div style={{ height: "auto" }} className="blog__item">
+                  <div className="read_more">
+                    <Link href="https://skynet.certik.com/tools/token-scan/polygon/0xC3882D10e49Ac4E9888D0C594DB723fC9cE95468" target="_blank" rel="noreferrer">
+                      <a>
+                        <span>CertiK Scan</span>
+                      </a>
+                    </Link>
+                  </div>
+                  <div className="read_more">
+                    <Link href="https://docs.goblinsaga.xyz/token-overview/gsa-token" target="_blank" rel="noreferrer">
+                      <a>
+                        <span>Token Docs</span>
+                      </a>
+                    </Link>
+                  </div>
+                  <div className="read_more">
+                    <Link href="https://d391b93f5f62d9c15f67142e43841acc.ipfscdn.io/ipfs/QmfKqeUfUgNwFn5B1fUAxzikj89mneZEETKrF7JfaJg5St" target="_blank" rel="noreferrer">
+                      <a>
+                        <span>Token Audit</span>
+                      </a>
+                    </Link>
+                  </div>
+                  <div className="read_more">
+                    <Link href="https://polygonscan.com/address/0xC3882D10e49Ac4E9888D0C594DB723fC9cE95468#code" target="_blank" rel="noreferrer">
+                      <a>
+                        <span>Verified Contract</span>
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
+                  <p>Launched With</p>
+                  <img src="/img/thirdweb-logo.png" alt="Thirdweb" style={{ width: "100px" }} />
+                </div>
               </div>
             </div>
             <div className="mint_right">

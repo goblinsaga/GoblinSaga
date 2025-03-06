@@ -115,7 +115,7 @@ const Apps = () => {
             flexWrap: "wrap", // Para asegurar que los elementos se ajusten bien en pantalla pequeña.
           }}
         >
-          <Link href="https://app.goblinsaga.xyz/defi">
+          <Link href="https://app.goblinsaga.xyz/defi#token-swap">
             <div
               style={{
                 width: "260px",
@@ -137,7 +137,7 @@ const Apps = () => {
                 <img src="/img/token-swap2.png" />
               </div>
               <div className="meta">
-                <p style={{ textAlign: "center" }}>Token Swap (Soon)</p>
+                <p style={{ textAlign: "center" }}>Token Swap</p>
               </div>
             </div>
           </Link>

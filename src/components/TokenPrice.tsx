@@ -144,7 +144,7 @@ const TokenPrice = () => {
                                     </h3>
                                 </div>
                             </div>
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "-40px", marginBottom: "10px" }}>
+                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "-40px", marginBottom: "20px" }}>
                                 <a href='/token' rel='noreferrer'>
                                     <img
                                         src='/img/GeckoTerminal.png'
@@ -179,6 +179,16 @@ const TokenPrice = () => {
                         rel="noreferrer"
                     >
                         <span>CertiK Scan</span>
+                    </a>
+                </div>
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                    <a href='https://bitcourier.co.uk/news/goblin-saga-interview' target='_blank' rel='noreferrer'>
+                        <img
+                            src='/img/bitcourier.png'
+                            style={{ width: "150px", transition: "transform 0.3s ease-in-out", cursor: "pointer" }}
+                            onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.2)"}
+                            onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
+                        />
                     </a>
                 </div>
             </div>

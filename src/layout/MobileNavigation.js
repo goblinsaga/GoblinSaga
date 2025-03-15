@@ -28,7 +28,7 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
               href="https://app.goblinsaga.xyz"
               className="metaportal_fn_button wallet_opener"
             >
-              <span>Launch App</span>
+              <span>Mining App</span>
             </a>
           </div>
         </div>

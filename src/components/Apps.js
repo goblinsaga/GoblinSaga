@@ -44,7 +44,7 @@ const Apps = () => {
                 <img src="/img/GSAV2.png" />
               </div>
               <div className="meta">
-                <p style={{ textAlign: "center" }}>Mining App</p>
+                <p style={{ textAlign: "center", fontSize: "14px" }}>Mining App</p>
               </div>
             </div>
           </Link>
@@ -71,7 +71,7 @@ const Apps = () => {
                 <img src="/img/POL-GSA2.png" />
               </div>
               <div className="meta">
-                <p style={{ textAlign: "center" }}>POL/GSA Staking</p>
+                <p style={{ textAlign: "center", fontSize: "14px" }}>POL/GSA Staking</p>
               </div>
             </div>
           </Link>
@@ -98,7 +98,7 @@ const Apps = () => {
                 <img src="/img/GSA-WGSA.png" />
               </div>
               <div className="meta">
-                <p style={{ textAlign: "center" }}>GSA/WGSA Staking</p>
+                <p style={{ textAlign: "center", fontSize: "14px" }}>GSA/WGSA Staking</p>
               </div>
             </div>
           </Link>
@@ -125,7 +125,7 @@ const Apps = () => {
                 <img src="/img/USDC-WGSA.png" />
               </div>
               <div className="meta">
-                <p style={{ textAlign: "center" }}>USDC/WGSA Stake</p>
+                <p style={{ textAlign: "center", fontSize: "14px" }}>USDC/WGSA Stake</p>
               </div>
             </div>
           </Link>
@@ -164,7 +164,7 @@ const Apps = () => {
                 <img src="/img/ankrPOL-WGSA.png" />
               </div>
               <div className="meta">
-                <p style={{ textAlign: "center" }}>ankrPOL/WGSA Stake</p>
+                <p style={{ textAlign: "center", fontSize: "14px" }}>ankrPOL/WGSA Stake</p>
               </div>
             </div>
           </Link>
@@ -191,7 +191,7 @@ const Apps = () => {
                 <img src="/img/aPOL-WGSA.png" />
               </div>
               <div className="meta">
-                <p style={{ textAlign: "center" }}>aPolWMATIC/WGSA Stake</p>
+                <p style={{ textAlign: "center", fontSize: "14px" }}>aPolWMATIC/WGSA Stake</p>
               </div>
             </div>
           </Link>
@@ -218,7 +218,7 @@ const Apps = () => {
                 <img src="/img/token-swap2.png" />
               </div>
               <div className="meta">
-                <p style={{ textAlign: "center" }}>Token Swap</p>
+                <p style={{ textAlign: "center", fontSize: "14px" }}>Token Swap</p>
               </div>
             </div>
           </Link>
@@ -245,7 +245,7 @@ const Apps = () => {
                 <img src="/img/DailyRewards2.png" />
               </div>
               <div className="meta">
-                <p style={{ textAlign: "center" }}>Task Center</p>
+                <p style={{ textAlign: "center", fontSize: "14px" }}>Task Center</p>
               </div>
             </div>
           </Link>

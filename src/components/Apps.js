@@ -5,10 +5,10 @@ const Apps = () => {
     <section id="news">
       <h3
         className="fn__maintitle big"
-        data-text="DeFi Apps"
+        data-text="Our Apps"
         data-align="center"
       >
-        DeFi Apps
+        Our Apps
       </h3>
       <div id="apps" className="container">
         <div
@@ -169,6 +169,45 @@ const Apps = () => {
             </div>
           </Link>
 
+          <Link href="https://app.goblinsaga.xyz/defi#defi-stake">
+            <div
+              style={{
+                width: "260px",
+                flex: "1 1 auto",
+                cursor: "pointer",
+                transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
+              }}
+              className="blog__item"
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-10px)";
+                e.currentTarget.style.boxShadow = "0px 4px 10px rgba(128, 0, 128, 0.6)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+            >
+              <div className="title">
+                <img src="/img/aPOL-WGSA.png" />
+              </div>
+              <div className="meta">
+                <p style={{ textAlign: "center" }}>aPolWMATIC/WGSA Stake</p>
+              </div>
+            </div>
+          </Link>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "10px",
+            paddingBottom: "2rem",
+            flexWrap: "wrap", // Para asegurar que los elementos se ajusten bien en pantalla pequeña.
+          }}
+        >
           <Link href="https://app.goblinsaga.xyz/defi#token-swap">
             <div
               style={{

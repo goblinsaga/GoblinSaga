@@ -234,6 +234,33 @@ const Apps = () => {
               </div>
             </div>
           </Link>
+
+          <Link href="https://app.goblinsaga.xyz/task-center">
+            <div
+              style={{
+                width: "260px",
+                flex: "1 1 auto",
+                cursor: "pointer",
+                transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
+              }}
+              className="blog__item"
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-10px)";
+                e.currentTarget.style.boxShadow = "0px 4px 10px rgba(128, 0, 128, 0.6)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+            >
+              <div className="title">
+                <img src="/img/DailyRewards2.png" />
+              </div>
+              <div className="meta">
+                <p style={{ textAlign: "center" }}>Task Center</p>
+              </div>
+            </div>
+          </Link>
         </div>
         {/* !News Shotcode */}
       </div>

@@ -102,19 +102,7 @@ const Apps = () => {
               </div>
             </div>
           </Link>
-        </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "10px",
-            paddingBottom: "2rem",
-            flexWrap: "wrap", // Para asegurar que los elementos se ajusten bien en pantalla pequeña.
-          }}
-        >
           <Link href="https://app.goblinsaga.xyz/defi#defi-stake">
             <div
               style={{
@@ -141,7 +129,19 @@ const Apps = () => {
               </div>
             </div>
           </Link>
+        </div>
 
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "10px",
+            paddingBottom: "2rem",
+            flexWrap: "wrap", // Para asegurar que los elementos se ajusten bien en pantalla pequeña.
+          }}
+        >
           <Link href="https://app.goblinsaga.xyz/defi#defi-stake">
             <div
               style={{
@@ -195,19 +195,7 @@ const Apps = () => {
               </div>
             </div>
           </Link>
-        </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "10px",
-            paddingBottom: "2rem",
-            flexWrap: "wrap", // Para asegurar que los elementos se ajusten bien en pantalla pequeña.
-          }}
-        >
           <Link href="https://app.goblinsaga.xyz/defi#token-swap">
             <div
               style={{

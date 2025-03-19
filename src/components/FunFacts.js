@@ -57,7 +57,7 @@ const FunFacts = () => {
               <div className="item">
                 <h3 className="fn__gradient_title">
                   <span className="prefix" />
-                  <Counter end={11} />
+                  <Counter end={15} />
                   <span className="suffix">POL</span>
                 </h3>
                 <p>Mint Price</p>

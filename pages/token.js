@@ -24,7 +24,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const router = useRouter();
   const { id } = router.query;
   const [similarItem, setSimilarItem] = useState([]);
-  const [quantity, setQuantity] = useState(100000);
+  const [quantity, setQuantity] = useState(400000);
   const pricePerNft = 0.000013;
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
@@ -129,7 +129,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
     setQuantity((prev) => {
       if (type === "+") {
         return prev + 100000; // Aumentar de 1000 en 1000
-      } else if (type === "-" && prev > 100000) {
+      } else if (type === "-" && prev > 400000) {
         return prev - 100000; // Disminuir de 1000 en 1000, pero no bajar de 2000
       }
       return prev;
@@ -147,7 +147,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
 
   const handleInputBlur = () => {
     if (!quantity || parseInt(quantity, 10) < 500000) {
-      setQuantity(100000); // Corrige el valor si es menor a 1,000,000
+      setQuantity(400000); // Corrige el valor si es menor a 1,000,000
     }
   };
 
@@ -161,9 +161,33 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
           {/* Mint Top */}
           <div className="metaportal_fn_mint_top">
             <div className="mint_left">
-              <div className="img">
-                <div className="img_in" style={{ backgroundImage: `url(${nft?.image || '/img/GSAV2.png'})` }}>
-                  <img src={nft?.image || '/img/GSAV2.png'} alt={nft?.title || 'NFT Image'} />
+              <div className="img" style={{
+                display: "flex", 
+                justifyContent: "center",
+                alignItems: "center", 
+                width: "100%", 
+                height: "100%",
+              }}>
+                <div
+                  className="img_in"
+                  style={{
+                    backgroundImage: `url(${nft?.image || '/img/GSAV2.png'})`,
+                    backgroundSize: "contain", 
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    width: "70%",
+                    height: "70%",
+                  }}
+                >
+                  <img
+                    src={nft?.image || '/img/GSAV2.png'}
+                    alt={nft?.title || 'NFT Image'}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "contain",
+                    }}
+                  />
                 </div>
               </div>
             </div>
@@ -188,35 +212,10 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
               <h3 className="fn__maintitle" data-text={nft && nft.title} data-align="left">
                 {nft && nft.title} Token Sale
               </h3>
+              <p style={{ textAlign: "justify" }}>The $GSA token is the backbone of the Goblin Saga ecosystem, designed to incentivize participation, strengthen the community, and expand opportunities within the blockchain world.</p>
+              <p style={{ textAlign: "justify" }}>With a maximum supply of 21 billion tokens and operating on the Polygon, Binance Smart Chain (BSC), and Ethereum networks, $GSA stands as a versatile and scalable digital asset, driving a decentralized and sustainable economy within the ecosystem.</p>
               <div>
                 <TokenPriceMint />
-              </div>
-              <div style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: "10px",
-                marginTop: "25px",
-              }}>
-                <a
-                  href="/token#token-mint"
-                  className="metaportal_fn_button"
-                  rel="noreferrer"
-                >
-                  <span>Mint Tokens</span>
-                </a>
-
-                <a
-                  href="https://skynet.certik.com/tools/token-scan/polygon/0xC3882D10e49Ac4E9888D0C594DB723fC9cE95468"
-                  target='_blank'
-                  className="metaportal_fn_button"
-                  rel="noreferrer"
-                >
-                  <span>CertiK Scan</span>
-                </a>
-              </div>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", paddingTop: "1rem" }}>
-                <AddTokenButton />
               </div>
             </div>
           </div>
@@ -272,6 +271,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                               backgroundColor: "transparent",
                               outline: "none",
                               boxShadow: "none",
+                              cursor: "pointer",
                             }}
                           />
                         </div>
@@ -393,8 +393,8 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                 </div>
 
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
-                  <p>Launched With</p>
-                  <img src="/img/thirdweb-logo.png" alt="Thirdweb" style={{ width: "100px" }} />
+                  <p>Deployed With</p>
+                  <img src="/img/thirdweb-logo.png" alt="Thirdweb" style={{ width: "100px", marginTop: "10px" }} />
                 </div>
               </div>
             </div>
@@ -427,7 +427,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                       <span className="status">6,000,000,000 $GSA</span>
                     </p>
                     <p style={{ marginTop: "10px" }}>
-                      <span className="text">Additional Supply (Optional)</span>
+                      <span className="text">Additional Supply <span style={{ color: "green" }}>(Optional)</span></span>
                       <span className="status">4,500,000,000 $GSA</span>
                     </p>
                     <p style={{ marginTop: "10px" }}>

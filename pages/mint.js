@@ -135,12 +135,18 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
               </h3>
               <div className="desc">
                 <p style={{ textAlign: "justify" }}>
-                  Conquer the DeFi world through NFTs, mining, and rewards in an innovative universe on Polygon.
+                  Conquer DeFi with NFTs, Staking & Rewards!
                 </p>
                 <p style={{ textAlign: "justify" }}>
-                  Goblin Saga is an exclusive collection of 4,444 hand-crafted pixel art NFTs, each one unique and designed to immerse you in a captivating world. These NFTs are not just digital collectibles—they are also your gateway to earning $GSA Token on Mining App, offering a new way to engage and grow your digital assets.
+                  Goblin Saga is a strategic DeFi ecosystem on Polygon, where Goblin NFTs are more than collectibles—they're powerful assets that unlock unique financial opportunities.
                 </p>
-                <p>Mint, Mine, Earn & Trade NOW!</p>
+                <p style={{ textAlign: "justify" }}>Each Goblin NFT is a key to:</p>
+                <ul>
+                  <li>⚒️ Mining $GSA – Stake your Goblins & earn passive rewards.</li>
+                  <li>💰 DeFi Utility – Use Goblins to access exclusive staking pools.</li>
+                  <li>🔥 Exclusive Perks – Boost earnings & unlock rare benefits.</li>
+                </ul>
+                <p>Stake, Earn & Conquer the DeFi world with your Goblins! 🚀</p>
               </div>
             </div>
           </div>
@@ -320,9 +326,10 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                   </div>
                 </div>
               </div>
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", marginTop: "50px" }}>
-                <p>Launched With</p>
-                <img src="/img/thirdweb-logo.png" alt="Thirdweb" style={{ width: "100px", marginTop: "-20px" }} />
+              
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", marginTop: "20px" }}>
+                <p style={{ fontSize: "16px" }}>Deployed With</p>
+                <img src="/img/thirdweb-logo.png" alt="Thirdweb" style={{ width: "100px", marginTop: "-10px" }} />
               </div>
             </div>
             <div className="mint_right">
@@ -390,11 +397,11 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
         <div className="container">
           <h3
             className="fn__maintitle big"
-            data-text="Notable Traits"
+            data-text="Favorite Traits"
             data-align="center"
             style={{ marginTop: "100px" }}
           >
-            Notable Traits
+            Favorite Traits
           </h3>
 
           <div style={{ paddingBottom: "10rem" }}>

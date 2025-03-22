@@ -28,13 +28,19 @@ const About = () => {
             </div>
             <div className="desc">
               <p style={{ textAlign: "justify" }}>
-                Goblin Saga introduces a groundbreaking fusion of cryptocurrencies and NFTs within a pixel-art-inspired gamified universe. More than just a marketplace, it offers a dynamic mining ecosystem where players engage in a richly designed world teeming with interactive opportunities.
+                Goblin Saga is a strategic DeFi ecosystem on Polygon, where Goblin NFTs are more than collectibles—they're powerful assets that unlock unique financial opportunities.
               </p>
               <p style={{ textAlign: "justify" }}>
-                At the heart of Goblin Saga are NFTs representing goblins, mining operations, refineries, and distinctive pixel-art items. Players can mine resources, collect NFTs, and participate in mining to unlock rewards, fostering an engaging experience that encourages consistent activity and community involvement.
+                Each Goblin NFT is a key to:
               </p>
+              <ul>
+                <li>⚒️ Mining $GSA – Stake your Goblins & earn passive rewards.</li>
+                <li>💰 DeFi Utility – Use Goblins to access exclusive staking pools.</li>
+                <li>🔥 Exclusive Perks – Boost earnings & unlock rare benefits.</li>
+              </ul>
+              <p style={{ textAlign: "justify" }}>With only 4,444 handcrafted pixel-art Goblins, every NFT is a rare digital warrior in the Goblin Saga universe.</p>
               <p style={{ textAlign: "justify" }}>
-                Goblin Saga is constantly evolving, combining innovation and continuous improvements to deliver a unique experience to its community. With each update, we introduce new features, optimize performance, and expand the possibilities within the ecosystem.
+                🔹 Stake, Earn & Conquer the DeFi world with your Goblins! 🚀
               </p>
             </div>
             <div
@@ -47,7 +53,7 @@ const About = () => {
                 <span>Mint Now</span>
               </a>
               <a href="https://docs.goblinsaga.xyz/" target="_blank" className="metaportal_fn_button" style={{ width: "150px" }}>
-                <span>Docs</span>
+                <span>Learn</span>
               </a>
             </div>
           </div>

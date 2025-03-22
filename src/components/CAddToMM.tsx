@@ -95,7 +95,9 @@ const AddTokenButton = () => {
                 src="/img/MetaMask_Fox.png" // Ruta de tu imagen personalizada
                 alt="Add Token"
                 onClick={addTokenToWallet}
-                style={{ cursor: "pointer", width: "25px", height: "auto" }} // Ajusta el estilo según sea necesario
+                style={{ cursor: "pointer", width: "25px", height: "auto", transition: "transform 0.3s ease-in-out" }} // Ajusta el estilo según sea necesario
+                onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.2)"}
+                onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
             />
         </div>
     );

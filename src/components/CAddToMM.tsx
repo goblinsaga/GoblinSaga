@@ -91,32 +91,11 @@ const AddTokenButton = () => {
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             {successMessage && <SuccessMessagePopup message={successMessage} onClose={() => setSuccessMessage('')} />}
             {errorMessage && <ErrorMessagePopup message={errorMessage} onClose={() => setErrorMessage('')} />}
-            <div style={{ border: "1px solid grey", borderRadius: "5px", boxShadow: "0px 0px 8px rgba(128, 0, 128, 0.5)" }}>
-                <p
-                    onClick={copyToClipboard}
-                    style={{
-                        cursor: "pointer",
-                        margin: 0,
-                        userSelect: "none",
-                        padding: "3px",
-                        marginLeft: "3px",
-                    }}
-                    title="Click to copy address"
-                >
-                    {`${tokenAddress.slice(0, 6)}...${tokenAddress.slice(-6)}`}
-                    <img
-                        src="/img/copy-icon.png" // Ruta de tu imagen personalizada para el ícono de copiar
-                        alt="Copy"
-                        onClick={copyToClipboard}
-                        style={{ cursor: "pointer", width: "20px", height: "20px", marginLeft: "5px" }} // Ajusta el tamaño según sea necesario
-                    />
-                </p>
-            </div>
             <img
                 src="/img/MetaMask_Fox.png" // Ruta de tu imagen personalizada
                 alt="Add Token"
                 onClick={addTokenToWallet}
-                style={{ cursor: "pointer", width: "32px", height: "auto" }} // Ajusta el estilo según sea necesario
+                style={{ cursor: "pointer", width: "25px", height: "auto" }} // Ajusta el estilo según sea necesario
             />
         </div>
     );

@@ -44,7 +44,7 @@ const useTotalTokensClaimed = () => {
     const [totalTokensClaimed, setTotalTokensClaimed] = useState<number | null>(null);
 
     useEffect(() => {
-        const provider = new ethers.providers.JsonRpcProvider('https://137.rpc.thirdweb.com');
+        const provider = new ethers.providers.JsonRpcProvider('https://polygon-mainnet.g.alchemy.com/v2/k2giPV8cSqnNo8IYCqbkonOpJKYyoaVR');
 
         const fetchAndListen = async () => {
             try {

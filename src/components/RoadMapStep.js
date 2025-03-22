@@ -23,8 +23,8 @@ const RoadMapSlider = () => {
               breakpoints={{
 
                 320: {
-                  slidesPerView: 1, 
-                  spaceBetween: 10,  
+                  slidesPerView: 1,
+                  spaceBetween: 10,
                 },
 
                 576: {
@@ -47,11 +47,11 @@ const RoadMapSlider = () => {
                 <SwiperSlide className="swiper-slide">
                   <div className="item">
                     <span className="icon" />
-                    <span className="phase">Step 01</span>
+                    <span className="phase">Step 01 ✔</span>
                     <div className="item_in">
                       <h3 className="title">Goblin Saga NFT Launch</h3>
                       <p className="desc">
-                        Launch of a unique collection of 4,444 hand-crafted pixel art NFTs. These NFTs will be minted under the ERC-721 standard and hosted on the eco-friendly Polygon network.
+                        4,444 unique hand-crafted pixel-art NFTs, each unlocking access to a DeFi-driven mining ecosystem. Minted under the ERC-721 standard, secured on Polygon and built for GameFi & DeFi protocols.
                       </p>
                     </div>
                   </div>
@@ -59,7 +59,7 @@ const RoadMapSlider = () => {
                 <SwiperSlide className="swiper-slide">
                   <div className="item">
                     <span className="icon" />
-                    <span className="phase">Step 02</span>
+                    <span className="phase">Step 02 ✔</span>
                     <div className="item_in">
                       <h3 className="title">$GSA Token Launch</h3>
                       <p className="desc">
@@ -71,11 +71,11 @@ const RoadMapSlider = () => {
                 <SwiperSlide className="swiper-slide">
                   <div className="item">
                     <span className="icon" />
-                    <span className="phase">Step 03</span>
+                    <span className="phase">Step 03 ✔</span>
                     <div className="item_in">
                       <h3 className="title">Launch of Mining App</h3>
                       <p className="desc">
-                        Launch of idle game-themed mining app, where holders will have the opportunity to purchase items. These items will help increase their earnings within a fully gamified environment.
+                        Launch of a DeFi-driven mining app where NFT holders can mine resources and interact with various DeFi protocols to maximize their rewards in a fully decentralized ecosystem.
                       </p>
                     </div>
                   </div>
@@ -83,7 +83,7 @@ const RoadMapSlider = () => {
                 <SwiperSlide className="swiper-slide">
                   <div className="item">
                     <span className="icon" />
-                    <span className="phase">Step 04</span>
+                    <span className="phase">Step 04 ⏲</span>
                     <div className="item_in">
                       <h3 className="title">NFT Collection Sold Out</h3>
                       <p className="desc">
@@ -111,7 +111,7 @@ const RoadMapSlider = () => {
                     <div className="item_in">
                       <h3 className="title">Token LP</h3>
                       <p className="desc">
-                        With sold-out status of NFT collection and the allocated supply from the token presale, the total liquidity will be increased by 100% of the token sale proceeds and 20% of the NFT sale proceeds.
+                        With sold-out of NFT collection and the allocated supply from the token sale, the total liquidity will be increased by 100% of the token sale proceeds and 20% of the NFT sale & DeFi Stakings.
                       </p>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ const RoadMapSlider = () => {
                     <div className="item_in">
                       <h3 className="title">Mining Season 2</h3>
                       <p className="desc">
-                        Once the GSA token is listed on the most popular DEXs, a new wave of mining will be launched within the app. 1,000,000,000 GSA tokens will be allocated to this step.
+                        Once the GSA token is listed on the most popular DEXs on Polygon, ETH and BSC a new wave of mining will be launched within the app. 1,000,000,000 GSA tokens will be allocated to this step.
                       </p>
                     </div>
                   </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import AddTokenButton from './CAddToMM';
 const TokenPriceMint = () => {
     const [tokenPriceUSD, setTokenPriceUSD] = useState(null);
 
@@ -69,7 +70,7 @@ const TokenPriceMint = () => {
                                             alignItems: "center",
                                         }}
                                     >
-                                        <span className="cc">
+                                        <span className="cc" style={{ marginTop: "-11px" }}>
                                             <img
                                                 style={{
                                                     marginTop: "-3px",
@@ -83,7 +84,7 @@ const TokenPriceMint = () => {
                                     {/* Contenedor del texto */}
                                     <div style={{ display: "flex", flexDirection: "column" }}>
                                         {/* Título principal */}
-                                        <div className="meta">
+                                        <div className="meta" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                                             <p
                                                 style={{
                                                     margin: "0",
@@ -91,6 +92,9 @@ const TokenPriceMint = () => {
                                             >
                                                 Goblin Saga Token
                                             </p>
+                                            <div>
+                                                <AddTokenButton />
+                                            </div>
                                         </div>
                                         {/* Subtítulo */}
                                         <div className="title">
@@ -107,7 +111,7 @@ const TokenPriceMint = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 style={{ margin: "0" }}>
+                                    <h3 style={{ margin: "0", color: "greenyellow", marginLeft: "5px" }}>
                                         $
                                         {tokenPriceUSD !== null ? (
                                             <span dangerouslySetInnerHTML={{ __html: formatPrice(tokenPriceUSD) }} />
@@ -116,14 +120,6 @@ const TokenPriceMint = () => {
                                         )}{' '}
                                     </h3>
                                 </div>
-                            </div>
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "-40px", marginBottom: "10px" }}>
-                                <img
-                                    src='/img/GeckoTerminal.png'
-                                    style={{ width: "130px", transition: "transform 0.3s ease-in-out", cursor: "pointer" }}
-                                    onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.2)"}
-                                    onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
-                                />
                             </div>
                         </div>
                     </div>

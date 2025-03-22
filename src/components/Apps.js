@@ -290,8 +290,8 @@ const Apps = () => {
                   top: "50%",
                   left: "50%",
                   transform: "translate(-50%, -50%)",
-                  maxWidth: "100%",
-                  maxHeight: "100%",
+                  maxWidth: "60%",
+                  maxHeight: "60%",
                   objectFit: "contain",
                 }}
               />
@@ -326,8 +326,8 @@ const Apps = () => {
                   top: "50%",
                   left: "50%",
                   transform: "translate(-50%, -50%)",
-                  maxWidth: "100%",
-                  maxHeight: "100%",
+                  maxWidth: "60%",
+                  maxHeight: "60%",
                   objectFit: "contain",
                 }}
               />
@@ -362,8 +362,8 @@ const Apps = () => {
                   top: "50%",
                   left: "50%",
                   transform: "translate(-50%, -50%)",
-                  maxWidth: "100%",
-                  maxHeight: "100%",
+                  maxWidth: "60%",
+                  maxHeight: "60%",
                   objectFit: "contain",
                 }}
               />

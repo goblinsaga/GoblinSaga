@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import AddTokenButton from './CAddToMM';
 
 const TokenPrice = () => {
     const [tokenPriceUSD, setTokenPriceUSD] = useState(null);
@@ -53,13 +54,6 @@ const TokenPrice = () => {
             }}
         >
             <div id="token-price" className="container">
-                <h3
-                    className="fn__maintitle big"
-                    data-text="Ecosystem Token"
-                    data-align="center"
-                >
-                    Ecosystem Token
-                </h3>
                 {/* News Shotcode */}
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "-40px", marginBottom: "10px" }}>
                     <a href='https://bitcourier.co.uk/news/goblin-saga-interview' target='_blank' rel='noreferrer'>
@@ -96,7 +90,7 @@ const TokenPrice = () => {
                                             alignItems: "center",
                                         }}
                                     >
-                                        <span className="cc">
+                                        <span className="cc" style={{ marginTop: "-11px" }}>
                                             <img
                                                 style={{
                                                     marginTop: "-3px",
@@ -110,7 +104,7 @@ const TokenPrice = () => {
                                     {/* Contenedor del texto */}
                                     <div style={{ display: "flex", flexDirection: "column" }}>
                                         {/* Título principal */}
-                                        <div className="meta">
+                                        <div className="meta" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                                             <p
                                                 style={{
                                                     margin: "0",
@@ -118,6 +112,9 @@ const TokenPrice = () => {
                                             >
                                                 Goblin Saga Token
                                             </p>
+                                            <div>
+                                                <AddTokenButton />
+                                            </div>
                                         </div>
                                         {/* Subtítulo */}
                                         <div className="title">
@@ -133,54 +130,41 @@ const TokenPrice = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <h3 style={{ margin: "0" }}>
-                                        $
-                                        {tokenPriceUSD !== null ? (
-                                            <span dangerouslySetInnerHTML={{ __html: formatPrice(tokenPriceUSD) }} />
-                                        ) : (
-                                            'Loading...'
-                                        )}{' '}
-                                    </h3>
+                                {/* Contenedor flexible para precio y botón */}
+                                <div style={{
+                                    display: "flex",
+                                    justifyContent: "space-between", // Alinear precio a la izquierda y botón a la derecha
+                                    alignItems: "center",
+                                    width: "100%", // Ocupar todo el ancho disponible
+                                    marginTop: "10px", // Espacio superior
+                                }}>
+                                    {/* Precio */}
+                                    <div>
+                                        <h3 style={{ margin: "0", color: "greenyellow", marginLeft: "5px" }}>
+                                            $
+                                            {tokenPriceUSD !== null ? (
+                                                <span dangerouslySetInnerHTML={{ __html: formatPrice(tokenPriceUSD) }} />
+                                            ) : (
+                                                'Loading...'
+                                            )}{' '}
+                                        </h3>
+                                    </div>
+                                    {/* Botón Mint Tokens */}
+                                    <div>
+                                        <a
+                                            href="/token"
+                                            className="metaportal_fn_button"
+                                            rel="noreferrer"
+                                        >
+                                            <span>Mint Tokens</span>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "-40px", marginBottom: "20px" }}>
-                                <a href='/token' rel='noreferrer'>
-                                    <img
-                                        src='/img/GeckoTerminal.png'
-                                        style={{ width: "130px", transition: "transform 0.3s ease-in-out", cursor: "pointer" }}
-                                        onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.2)"}
-                                        onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
-                                    />
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 {/* !News Shotcode */}
-                <div style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "10px",
-                }}>
-                    <a
-                        href="/token"
-                        className="metaportal_fn_button"
-                        rel="noreferrer"
-                    >
-                        <span>Mint Tokens</span>
-                    </a>
-                    <a
-                        href="https://skynet.certik.com/tools/token-scan/polygon/0xC3882D10e49Ac4E9888D0C594DB723fC9cE95468"
-                        className="metaportal_fn_button"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <span>CertiK Scan</span>
-                    </a>
-                </div>
             </div>
         </section>
     );

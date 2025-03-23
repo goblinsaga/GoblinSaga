@@ -18,7 +18,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const { id } = router.query;
   const [similarItem, setSimilarItem] = useState([]);
   const [quantity, setQuantity] = useState(1); // Cantidad inicial
-  const pricePerNft = 15; // Precio por NFT
+  const pricePerNft = 11; // Precio por NFT
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const address = useAddress();
@@ -262,7 +262,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                           error.message.includes("missing revert data")
                         ) {
                           setErrorMessage(
-                            `Minting failed: Insufficient funds. Mint price 15.0 POL.`
+                            `Minting failed: Insufficient funds. Mint price 11.0 POL.`
                           );
                         } else {
                           setErrorMessage(`Minting failed: ${errorName}`);
@@ -360,7 +360,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                     <span className="text">Phase 4:</span>
                   </p>
                   <div style={{ marginBottom: "10px" }}>
-                    <span className="status"><p style={{ color: "#00fc00" }}>Live: 15 <img src="/img/POL.png" style={{ width: "20px", marginTop: "3px", marginLeft: "3px" }} /></p></span>
+                    <span className="status"><p style={{ color: "#00fc00" }}>Live: 11 <img src="/img/POL.png" style={{ width: "20px", marginTop: "3px", marginLeft: "3px" }} /></p></span>
                   </div>
                   <p>
                     <span className="text">Secret Phase:</span>

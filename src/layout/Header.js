@@ -18,7 +18,7 @@ const Header = ({ walletToggle, navigationToggle }) => {
             <div className="logo">
               <Link href="/">
                 <a>
-                  <img style={{ height: "70px" }} src="/img/Logo_type2.png" alt="" />
+                  <img style={{ height: "50px" }} src="/img/Logo_type2.png" alt="" />
                 </a>
               </Link>
             </div>
@@ -57,7 +57,7 @@ const Header = ({ walletToggle, navigationToggle }) => {
               </li>
               <li>
                 <Link href="/token">
-                  <a className="creative_link">Token</a>
+                  <a className="creative_link">Token Sale</a>
                 </Link>
               </li>
             </ul>

@@ -70,18 +70,13 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
               </a>
             </li>
             <li>
-              <a className="creative_link" href="#top">
-                Top Miners
-              </a>
-            </li>
-            <li>
               <Link href="/mint">
-                <a className="creative_link">Mint</a>
+                <a className="creative_link">NFT Mint</a>
               </Link>
             </li>
             <li>
               <Link href="/token">
-                <a className="creative_link">Token</a>
+                <a className="creative_link">Token Sale</a>
               </Link>
             </li>
           </ul>

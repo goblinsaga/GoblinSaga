@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useEffect, useRef } from "react";
 import About from "../src/components/About";
 import Collection from "../src/components/Collection";
 import FunFacts from "../src/components/FunFacts";
@@ -14,9 +14,50 @@ import NewUsersTwo from "../src/components/NewUsers2";
 import TokenPrice from "../src/components/TokenPrice";
 
 const Index = () => {
+  const sectionRefs = useRef([]);
+  
   useLayoutEffect(() => {
     heroSlider2();
   }, []);
+
+  useEffect(() => {
+    const addToRefs = (el) => {
+      if (el && !sectionRefs.current.includes(el)) {
+        sectionRefs.current.push(el);
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('section-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      }
+    );
+
+    sectionRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      sectionRefs.current.forEach((el) => {
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, []);
+
+  const addSectionRef = (el) => {
+    if (el && !sectionRefs.current.includes(el)) {
+      sectionRefs.current.push(el);
+    }
+  };
 
   return (
     <Layout pageTitle={"Home #3"}>
@@ -141,32 +182,84 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Other Sections */}
+      {/* Other Sections with Scroll Animation */}
       <FunFacts />
 
-      <TokenPrice />
+      <div ref={addSectionRef} className="scroll-section">
+        <TokenPrice />
+      </div>
 
-      <NewUsersTwo />
+      <div ref={addSectionRef} className="scroll-section">
+        <NewUsersTwo />
+      </div>
       
-      <About />
+      <div ref={addSectionRef} className="scroll-section">
+        <About />
+      </div>
 
-      <Partners />
+      <div ref={addSectionRef} className="scroll-section">
+        <Partners />
+      </div>
 
-      <Apps />
+      <div ref={addSectionRef} className="scroll-section">
+        <Apps />
+      </div>
 
-      <SectionDivider />
+      <div ref={addSectionRef} className="scroll-section">
+        <SectionDivider />
+      </div>
 
-      <Collection />
+      <div ref={addSectionRef} className="scroll-section">
+        <Collection />
+      </div>
 
-      <SeenOn />
+      <div ref={addSectionRef} className="scroll-section">
+        <SeenOn />
+      </div>
 
-      <SectionDivider />
+      <div ref={addSectionRef} className="scroll-section">
+        <SectionDivider />
+      </div>
 
-      <Legacy />
+      <div ref={addSectionRef} className="scroll-section">
+        <Legacy />
+      </div>
 
-      <SectionDivider />
+      <div ref={addSectionRef} className="scroll-section">
+        <SectionDivider />
+      </div>
 
-      <Faq />
+      <div ref={addSectionRef} className="scroll-section">
+        <Faq />
+      </div>
+
+      <style jsx global>{`
+        /* Scroll Animation Styles */
+        .scroll-section {
+          opacity: 0;
+          transform: translateY(40px);
+          transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .scroll-section.section-visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* Add delay for each section */
+        .scroll-section:nth-child(1) { transition-delay: 0.1s; }
+        .scroll-section:nth-child(2) { transition-delay: 0.2s; }
+        .scroll-section:nth-child(3) { transition-delay: 0.3s; }
+        .scroll-section:nth-child(4) { transition-delay: 0.4s; }
+        .scroll-section:nth-child(5) { transition-delay: 0.5s; }
+        .scroll-section:nth-child(6) { transition-delay: 0.6s; }
+        .scroll-section:nth-child(7) { transition-delay: 0.7s; }
+        .scroll-section:nth-child(8) { transition-delay: 0.8s; }
+        .scroll-section:nth-child(9) { transition-delay: 0.9s; }
+        .scroll-section:nth-child(10) { transition-delay: 1.0s; }
+        .scroll-section:nth-child(11) { transition-delay: 1.1s; }
+        .scroll-section:nth-child(12) { transition-delay: 1.2s; }
+      `}</style>
     </Layout>
   );
 };

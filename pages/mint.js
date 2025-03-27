@@ -18,7 +18,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const { id } = router.query;
   const [similarItem, setSimilarItem] = useState([]);
   const [quantity, setQuantity] = useState(1); // Cantidad inicial
-  const pricePerNft = 15; // Precio por NFT
+  const pricePerNft = 11; // Precio por NFT
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const address = useAddress();
@@ -155,7 +155,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
           <div className="metaportal_fn_mintbox">
             <div className="mint_left">
               <div className="mint_title">
-                <span>Mint Phase 4</span>
+                <span>Mint Phase 4 - 27% OFF</span>
               </div>
               <div className="mint_list">
                 <ul>

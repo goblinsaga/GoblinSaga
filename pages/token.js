@@ -427,7 +427,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                       <span className="status">6,000,000,000 $GSA</span>
                     </p>
                     <p style={{ marginTop: "10px" }}>
-                      <span className="text">Additional Supply <span style={{ color: "green" }}>(Optional)</span></span>
+                      <span className="text">Reserve Supply</span>
                       <span className="status">4,500,000,000 $GSA</span>
                     </p>
                     <p style={{ marginTop: "10px" }}>

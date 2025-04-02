@@ -25,7 +25,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const { id } = router.query;
   const [similarItem, setSimilarItem] = useState([]);
   const [quantity, setQuantity] = useState(400000);
-  const pricePerNft = 0.000013;
+  const pricePerNft = 0.000003;
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [totalSupplyFormatted, setTotalSupplyFormatted] = useState("");
@@ -129,7 +129,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
     setQuantity((prev) => {
       if (type === "+") {
         return prev + 100000; // Aumentar de 1000 en 1000
-      } else if (type === "-" && prev > 400000) {
+      } else if (type === "-" && prev > 100000) {
         return prev - 100000; // Disminuir de 1000 en 1000, pero no bajar de 2000
       }
       return prev;
@@ -146,8 +146,8 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   };
 
   const handleInputBlur = () => {
-    if (!quantity || parseInt(quantity, 10) < 500000) {
-      setQuantity(400000); // Corrige el valor si es menor a 1,000,000
+    if (!quantity || parseInt(quantity, 10) < 100000) {
+      setQuantity(100000); // Corrige el valor si es menor a 1,000,000
     }
   };
 
@@ -231,7 +231,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                   <li>
                     <div className="item">
                       <h4>Price per token</h4>
-                      <h3>0.000013 <img src="/img/POL.png" style={{ width: "20px", marginTop: "-4px", marginLeft: "-5px" }} /> <span style={{ fontSize: "11px" }}>(polygon)</span></h3>
+                      <h3>0.000003 <img src="/img/USDT.png" style={{ width: "20px", marginTop: "-4px", marginLeft: "-5px" }} /> <span style={{ fontSize: "11px" }}>(polygon)</span></h3>
                     </div>
                   </li>
                   <li>
@@ -290,7 +290,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                       <h4>Total Price</h4>
                       <h3>
                         <span className="total_price">
-                          {totalPrice} <img src="/img/POL.png" style={{ width: "20px", marginTop: "-4px", marginLeft: "-5px" }} /> <span style={{ fontSize: "11px" }}>(+ gas)</span>
+                          {totalPrice} <img src="/img/USDT.png" style={{ width: "20px", marginTop: "-4px", marginLeft: "-5px" }} /> <span style={{ fontSize: "11px" }}>(+ gas)</span>
                         </span>
                       </h3>
                     </div>
@@ -362,13 +362,6 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
 
                 <p style={{ marginBottom: "10px" }}>About Token ⤵</p>
                 <div style={{ height: "auto" }} className="blog__item">
-                  <div className="read_more">
-                    <Link href="https://skynet.certik.com/tools/token-scan/polygon/0xC3882D10e49Ac4E9888D0C594DB723fC9cE95468" target="_blank" rel="noreferrer">
-                      <a>
-                        <span>CertiK Scan</span>
-                      </a>
-                    </Link>
-                  </div>
                   <div className="read_more">
                     <Link href="https://docs.goblinsaga.xyz/token-overview/gsa-token" target="_blank" rel="noreferrer">
                       <a>

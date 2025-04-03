@@ -406,7 +406,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                     <span className="status">3,750,000,000 $GSA</span>
                   </p>
                   <p>
-                    <span className="text">DEX/CEX</span>
+                    <span className="text">Liquidity</span>
                     <span className="status">6,000,000,000 $GSA</span>
                   </p>
                 </div>
@@ -421,11 +421,11 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                     </p>
                     <p style={{ marginTop: "10px" }}>
                       <span className="text">Reserve Supply</span>
-                      <span className="status">4,500,000,000 $GSA</span>
+                      <span className="status">2,000,000,000 $GSA</span>
                     </p>
                     <p style={{ marginTop: "10px" }}>
                       <span className="text">Total Supply</span>
-                      <span className="status">21,000,000,000 $GSA</span>
+                      <span className="status">18,750,000,000 $GSA</span>
                     </p>
                   </div>
                 </div>

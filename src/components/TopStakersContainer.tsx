@@ -4,7 +4,7 @@ import RewardsContractABI from '../../contracts/RewardsContractABI.json';
 import TopStakers from './TopStakers';
 import React from 'react';
 
-const contractAddress = '0xD38bD38f9b96c9B34000A1336614506B272Fe913';
+const contractAddress = '0x4c501f493aE00a866A8cB2De4fc31f19e5d676f0';
 const providerUrl = 'https://polygon-mainnet.g.alchemy.com/v2/1LBbYhQTe0JI9CY6L_zQmmDHv9usXC14';
 
 const CACHE_KEY = 'topStakersData';

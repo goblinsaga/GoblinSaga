@@ -1,70 +1,19 @@
 import TopStakersContainer from "./TopStakersContainer";
-import RewardPool from "./RewardPool";
-import ClaimRewardsButton from "./ClaimRewardsButton";
-import RewardPoolFourToTen from "./RewardPool4to10";
-import ClaimRewardsButtonFourToTen from "./ClaimRewardsButton4to10";
-import CountdownTimer from "./CoundownTimer";
 
 const TopMiners = () => {
   const targetDate = new Date('2025-03-02T11:00:00');
   return (
-    <section id="about">
+    <section id="top-miners">
       <div id="top" className="container">
         <h3
           className="fn__maintitle big"
-          data-text="Top Miners"
+          data-text="Hall of Fame"
           data-align="center"
-          style={{ marginBottom: "100px" }}
+          style={{ marginBottom: "50px" }}
         >
-          Top Miners
-        </h3>  
-        <div style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
-          <p style={{ textAlign: "center" }}>Next Claim</p>
-          <CountdownTimer targetDate={targetDate} />
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "10px",
-            paddingBottom: "2rem",
-            flexWrap: "wrap", // Para asegurar que los elementos se ajusten bien en pantalla pequeña.
-          }}
-        >
-          <div
-            style={{
-              width: "260px",
-              flex: "1 1 auto", // Permite que los elementos se adapten.
-            }}
-            className="blog__item"
-          >
-            <div className="meta">
-              <p style={{ textAlign: "center" }}>Top 1 to 3 Rewards</p>
-              <RewardPool />
-            </div>
-            <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
-              <ClaimRewardsButton />
-            </div>
-          </div>
-
-          <div
-            style={{
-              width: "260px",
-              flex: "1 1 auto",
-            }}
-            className="blog__item"
-          >
-            <div className="meta">
-              <p style={{ textAlign: "center" }}>Top 4 to 10 Rewards</p>
-              <RewardPoolFourToTen />
-            </div>
-            <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
-              <ClaimRewardsButtonFourToTen />
-            </div>
-          </div>
-        </div>
+          Hall of Fame
+        </h3>
+        <p style={{ textAlign: "center",  }}>Top Miners</p>
         <div>
           <TopStakersContainer />
         </div>

@@ -20,7 +20,7 @@ const TopMinersRewards: React.FC<TopMinersRewardsProps> = ({ stakersData, loadin
                     alignItems: "center", // Centra verticalmente
                 }}
             >
-                Loading...
+                Loading Top Miners...
             </div>
         );
     }

@@ -1,7 +1,6 @@
 import TopStakersContainer from "./TopStakersContainer";
 
 const TopMiners = () => {
-  const targetDate = new Date('2025-03-02T11:00:00');
   return (
     <section id="top-miners">
       <div id="top" className="container">
@@ -9,7 +8,7 @@ const TopMiners = () => {
           className="fn__maintitle big"
           data-text="Hall of Fame"
           data-align="center"
-          style={{ marginBottom: "50px" }}
+          style={{ marginBottom: "50px", marginTop: "100px" }}
         >
           Hall of Fame
         </h3>

@@ -186,57 +186,31 @@ const Index = () => {
       {/* Other Sections with Scroll Animation */}
       <FunFacts />
 
-      <div ref={addSectionRef} className="scroll-section">
-        <TokenPrice />
-      </div>
+      <TokenPrice />
 
-      <div ref={addSectionRef} className="scroll-section">
-        <NewUsersTwo />
-      </div>
+      <NewUsersTwo />
 
-      <div ref={addSectionRef} className="scroll-section">
-        <TopMiners />
-      </div>
+      <TopMiners />
       
-      <div ref={addSectionRef} className="scroll-section">
-        <About />
-      </div>
+      <About />
 
-      <div ref={addSectionRef} className="scroll-section">
-        <Partners />
-      </div>
+      <Partners />
 
-      <div ref={addSectionRef} className="scroll-section">
-        <Apps />
-      </div>
+      <Apps />
 
-      <div ref={addSectionRef} className="scroll-section">
-        <SectionDivider />
-      </div>
+      <SectionDivider />
+      
+      <Collection />
 
-      <div ref={addSectionRef} className="scroll-section">
-        <Collection />
-      </div>
+      <SeenOn />
 
-      <div ref={addSectionRef} className="scroll-section">
-        <SeenOn />
-      </div>
+      <SectionDivider />
 
-      <div ref={addSectionRef} className="scroll-section">
-        <SectionDivider />
-      </div>
+      <Legacy />
 
-      <div ref={addSectionRef} className="scroll-section">
-        <Legacy />
-      </div>
+      <SectionDivider />
 
-      <div ref={addSectionRef} className="scroll-section">
-        <SectionDivider />
-      </div>
-
-      <div ref={addSectionRef} className="scroll-section">
-        <Faq />
-      </div>
+      <Faq />
 
       <style jsx global>{`
         /* Scroll Animation Styles */

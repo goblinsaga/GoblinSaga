@@ -377,7 +377,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                   <div className="mint_checked">
                     <p>
                       <span className="text">1 Goblin:</span>
-                      <p className="status">$1800 <img src="/img/GSAV2.png" style={{ width: "23px", height: "23px", marginLeft: "3px", marginRight: "5px" }} /> - 24H</p>
+                      <p className="status">$2000 <img src="/img/GSAV2.png" style={{ width: "23px", height: "23px", marginLeft: "3px", marginRight: "5px" }} /> - 24H</p>
                     </p>
                   </div>
                   <div className="mint_checked">

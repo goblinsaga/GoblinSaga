@@ -188,7 +188,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                       <h4>Total Price</h4>
                       <h3>
                         <span className="total_price">
-                          {totalPrice} <img src="/img/USDT.png" style={{ width: "20px", marginTop: "-5px" }} /> <span style={{ fontSize: "11px" }}>(+ GAS)</span>
+                          {totalPrice} <img src="/img/POL.png" style={{ width: "20px", marginTop: "-5px" }} /> <span style={{ fontSize: "11px" }}>(+ GAS)</span>
                         </span>
                       </h3>
                     </div>
@@ -262,7 +262,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                           error.message.includes("missing revert data")
                         ) {
                           setErrorMessage(
-                            `Minting failed: Insufficient funds. Mint price 3.0 USDT.`
+                            `Minting failed: Insufficient funds. Mint price 15.0 POL.`
                           );
                         } else {
                           setErrorMessage(`Minting failed: ${errorName}`);

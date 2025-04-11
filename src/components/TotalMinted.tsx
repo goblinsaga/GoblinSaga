@@ -14,7 +14,7 @@ const MintCounter: React.FC<MintCounterProps> = ({ contractAddress }) => {
     const fetchMintCount = async () => {
       try {
         // Conectar a la red Polygon (Matic)
-        const provider = new ethers.providers.JsonRpcProvider('https://polygon-rpc.com');
+        const provider = new ethers.providers.JsonRpcProvider('https://polygon-mainnet.g.alchemy.com/v2/xE8v6mApJllCIQ6aAxio-yb5ClJQkJQu');
 
         // ABI del contrato inteligente
         const abi = [
@@ -68,7 +68,7 @@ const MintCounter: React.FC<MintCounterProps> = ({ contractAddress }) => {
 
   return (
     <span>
-      {mintCount !== null ? mintCount : 'Loading...'}/4444
+      {mintCount !== null ? mintCount : 'Loading...'}/5555
     </span>
   );
 };

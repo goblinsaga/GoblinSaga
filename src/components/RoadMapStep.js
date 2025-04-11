@@ -51,7 +51,7 @@ const RoadMapSlider = () => {
                     <div className="item_in">
                       <h3 className="title">Goblin Saga NFT Launch</h3>
                       <p className="desc">
-                        4,444 unique hand-crafted pixel-art NFTs, each unlocking access to a DeFi-driven mining ecosystem. Minted under the ERC-721 standard, secured on Polygon and built for GameFi & DeFi protocols.
+                        5,555 unique hand-crafted pixel-art NFTs, each unlocking access to a DeFi-driven mining ecosystem. Minted under the ERC-721 standard, secured on Polygon and built for GameFi & DeFi protocols.
                       </p>
                     </div>
                   </div>

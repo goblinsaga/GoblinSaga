@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
-import Counter from './Counter'; // Importa el componente Counter
+import Counter from './Counter'; 
 
 interface MintCounterProps {
   contractAddress: string;
@@ -14,10 +14,8 @@ const GoblinsMinted: React.FC<MintCounterProps> = ({ contractAddress }) => {
 
     const fetchMintCount = async () => {
       try {
-        // Conectar a la red Polygon (Matic)
-        const provider = new ethers.providers.JsonRpcProvider('https://polygon-rpc.com');
+        const provider = new ethers.providers.JsonRpcProvider('https://polygon-mainnet.g.alchemy.com/v2/xE8v6mApJllCIQ6aAxio-yb5ClJQkJQu');
 
-        // ABI del contrato inteligente
         const abi = [
           {
             inputs: [],
@@ -39,20 +37,15 @@ const GoblinsMinted: React.FC<MintCounterProps> = ({ contractAddress }) => {
       }
     };
 
-    // Inicia la primera llamada de inmediato
     fetchMintCount();
 
-    // Configura el intervalo para actualizar cada 5 segundos
-    intervalId = setInterval(fetchMintCount, 5000);
+    intervalId = setInterval(fetchMintCount, 15000);
 
-    // Limpia el intervalo al desmontar el componente
     return () => clearInterval(intervalId);
   }, [contractAddress]);
 
-  // Función para obtener el total de mintings del contrato inteligente
   const fetchMintCountFromContract = async (contract: ethers.Contract): Promise<number> => {
     try {
-      // Llama a la función totalMinted del contrato
       const count = await contract.totalMinted();
       return count.toNumber();
     } catch (error) {
@@ -64,7 +57,7 @@ const GoblinsMinted: React.FC<MintCounterProps> = ({ contractAddress }) => {
   return (
     <div>
       {mintCount !== null ? (
-        <Counter end={mintCount} decimals={0} /> // Usa Counter para la animación
+        <Counter end={mintCount} decimals={0} />
       ) : (
         <p>Loading...</p>
       )}

@@ -89,7 +89,7 @@ const Index = () => {
             </a>
           </div>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "20px" }}>
-            <a href="https://nftcalendar.io/event/goblin-saga-nft-mi-1/" target="_blank">
+            <a href="https://nftcalendar.io/event/goblin-saga-mint-p/" target="_blank">
               <img src="/img/NFTCalendar.png" 
                 style={{ 
                   width: "50px", 

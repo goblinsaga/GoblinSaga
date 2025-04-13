@@ -25,7 +25,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
   const { id } = router.query;
   const [similarItem, setSimilarItem] = useState([]);
   const [quantity, setQuantity] = useState(400000);
-  const pricePerNft = 0.000003;
+  const pricePerNft = 0.00003;
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [totalSupplyFormatted, setTotalSupplyFormatted] = useState("");
@@ -231,7 +231,7 @@ const Nft = ({ getSingleNft, nft, getNfts, nfts }) => {
                   <li>
                     <div className="item">
                       <h4>Price per token</h4>
-                      <h3>0.000003 <img src="/img/POL.png" style={{ width: "20px", marginTop: "-4px", marginLeft: "-5px" }} /> <span style={{ fontSize: "11px" }}>(polygon)</span></h3>
+                      <h3>0.00003 <img src="/img/POL.png" style={{ width: "20px", marginTop: "-4px", marginLeft: "-5px" }} /> <span style={{ fontSize: "11px" }}>(polygon)</span></h3>
                     </div>
                   </li>
                   <li>

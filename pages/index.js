@@ -14,6 +14,7 @@ import NewUsersTwo from "../src/components/NewUsers2";
 import TokenPrice from "../src/components/TokenPrice";
 import TopMiners from "../src/components/TopMiners";
 import PartnershipSlider from "../src/components/PartnershipSlider";
+import ZeusCenterApp from "../src/components/ZeusHelpBanner";
 
 const Index = () => {
   const sectionRefs = useRef([]);
@@ -186,6 +187,10 @@ const Index = () => {
 
       {/* Other Sections with Scroll Animation */}
       <FunFacts />
+
+      <div ref={addSectionRef} className="scroll-section">
+        <ZeusCenterApp />
+      </div>
 
       <div ref={addSectionRef} className="scroll-section">
         <TokenPrice />
